@@ -648,6 +648,14 @@ def reportStats():
     print( "HOLEs: " + str(HOLEs) )
     
     
+def reshape(trainingSet):
+    """
+    This is to add the 'Channels' Dimension for Keras.
+    """
+    getShape = trainingSet.shape
+    newShape = getShape + (1,)
+    return trainingSet.reshape(newShape)
+    
     
 def unpickleTrainAndTestList( nameID ):
     """
