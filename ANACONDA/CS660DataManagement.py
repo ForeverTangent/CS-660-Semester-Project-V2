@@ -479,6 +479,16 @@ def getSubDirectoryAndEXTForDataFlavor( dataFlavor ):
     return { 'SubDir' : subCombinedDataDir, 'EXT': fileExtention }
         
     
+
+def load_dataset( nameID, dataFlavor ):
+    print("FILL IN")
+    xTrainLearningSet = None
+    yTrainVerificationSet = None
+    xTestLearningSet = None
+    yTestVerificationSet = None
+    return xTrainLearningSet, yTrainVerificationSet, xTestLearningSet, yTestVerificationSet
+
+
 def pickNormOrFlopForTrainingTestingLists( theList ):
     """
     Add '1' or '0' to pick a norm or flop version of picture.
