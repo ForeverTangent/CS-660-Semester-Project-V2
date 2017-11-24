@@ -10,14 +10,13 @@ import random
 import datetime
 
 import numpy as np
-
-import PIL
 import pickle
 
+from PIL import Image
 
 combinedDataDir = os.path.join( os.getcwd(), os.pardir, 'DATA', 'COMBINED' )
 pickleDataDir = os.path.join( os.getcwd(), os.pardir, 'DATA', 'PICKLES' )
-searCSVInfoFile = os.path.join( combinedDataDir, 'SEAR_DC_INFO.csv' )
+searCSVInfoFile = os.path.join(combinedDataDir, 'SEAR_DC_INFO.csv')
 
 imageDirs = ['ICOLOR', 'IDEPTH']
 csvDirs = ['PCLOUD']
@@ -31,50 +30,144 @@ def CS660DataManagementCheck():
     """
     print("CS660DataManagementCheck Imported")
     
-    
-def createLearningAndVerificationPickle( index, dataFlavor ):
+
+
+def createAllBasicData():
     """
-    Create the Pickles for the Learning and Verification NPArray of a dataFlavor
-    
+    This is core function to build all basic data.
+    Only run this once
+    Returns:
+
+    """
+    pickleCheck = os.path.join(pickleDataDir, 'PICKLES_EXIST.pkl')
+
+    if (not os.path.exists( pickleCheck )):
+
+        numberOfSetsToCreate = 5
+
+        # print(searDCInfoCSVFileAsDict)
+
+        dictOfClassLists =  getDictOfClassLists()
+
+        print("")
+
+        print("TEST CHECK")
+
+        print("")
+
+
+        for key in dictOfClassLists.keys():
+            print(key, len(dictOfClassLists[key]))
+
+        print("")
+
+        allTestLists = []
+
+        #  We want to geneate 5 sets of Training and Test List.
+        for index in range(numberOfSetsToCreate):
+
+            #First we generate Test Set, to remove them from the overall set.
+            dictOfTestSetAndRemainingDict = getKeysForATestingList( dictOfClassLists, 40 )
+
+            pickleTestList( dictOfTestSetAndRemainingDict['TestList'], index )
+            allTestLists.append(dictOfTestSetAndRemainingDict['TestList'])
+            dictOfClassLists = dictOfTestSetAndRemainingDict['RemainingDict']
+
+            for key in dictOfClassLists.keys():
+                print(key, len(dictOfClassLists[key]))
+
+            print("")
+
+
+        print("TRAINING CHECK")
+        print("")
+
+        # Now Create the Training Lists from the remaining Elements.
+        # Because we have already removed the test keys we know they are disjoint.
+
+        allTrainingLists = []
+
+        for index in range(numberOfSetsToCreate):
+
+            # First we generate Test Set, to remove them from the overall set.
+            dictOfTrainingSetAndRemainingDict = getKeysForTrainingList(dictOfClassLists, 200)
+
+            pickleTrainingList( dictOfTrainingSetAndRemainingDict['TrainingList'], index )
+            allTrainingLists.append( dictOfTrainingSetAndRemainingDict['TrainingList'] )
+            dictOfClassLists = dictOfTrainingSetAndRemainingDict['RemainingDict']
+
+            for key in dictOfClassLists.keys():
+                print(key, len(dictOfClassLists[key]))
+
+            print("")
+
+
+        for index in range(len(allTestLists)):
+            for flavor in allDataFlavors:
+                print( "TEST", index, flavor )
+
+                dictOfLVArrays = createNPArraysFor( allTestLists[index], flavor )
+
+                print( dictOfLVArrays['LEARNING'].shape, dictOfLVArrays['VERIFICATION'].shape)
+
+                pickleLearningSet( dictOfLVArrays['LEARNING'], 'TEST', flavor, index)
+                pickleVerificationSet( dictOfLVArrays['VERIFICATION'], 'TEST', flavor, index)
+
+
+        for index in range(len(allTrainingLists)):
+            for flavor in allDataFlavors:
+                print( "TRAINING", index, flavor )
+
+                dictOfLVArrays = createNPArraysFor( allTrainingLists[index], flavor )
+
+                print( dictOfLVArrays['LEARNING'].shape, dictOfLVArrays['VERIFICATION'].shape)
+
+                pickleLearningSet( dictOfLVArrays['LEARNING'], 'TRAINING', flavor, index)
+                pickleVerificationSet( dictOfLVArrays['VERIFICATION'], 'TRAINING', flavor, index)
+
+
+        pickleExistFile = os.path.join(pickleDataDir, 'PICKLES_EXIST.pkl')
+        fo = open( pickleExistFile, 'w' )
+        fo.write( 'Pickles Exists. Don\'t make anything.' )
+        fo.close()
+
+        print("")
+        print('Pickles Made, good to go.')
+        print("")
+    else:
+        print("")
+        print('Pickles Exist, don\'t have to do anything.')
+        print("")
+
+
+def createNPArraysFor( theList, dataFlavor ):
+    """
+    Gets the NPArrays for a given list of Elements.
+
     PARAMETERS:
-    index: Int of the case to make.
-    dataFlavor: String of the data flavor
+        theList: A List of element Keys
+        dataFlavor: String of What type of Data we are looking at
+            ['ICOLOR', 'IDEPTH', 'PCLOUD']
     """
-    
-    trainingLists = unpickleTrainingLists()
-    testLists = unpickleTestLists()
-    
-    theArrays = getLearningAndVerificationArraysForTrainingOrTestList( trainingLists[index], dataFlavor )
 
-    print( "Training INDEX: " + str(index) )
-    print( theArrays['LEARNING'].shape )
-    print( theArrays['VERIFICATION'].shape )
+    dataFlavorInfo = getSubDirectoryAndEXTForDataFlavor(dataFlavor)
 
-    pickleLearningSet( theArrays['LEARNING'], 'TRAINING', dataFlavor, index )
-    pickleVerificationSet( theArrays['VERIFICATION'], 'TRAINING', dataFlavor, index )
+    subDir = dataFlavorInfo['SubDir']
+    extention = dataFlavorInfo['EXT']
 
+    # Get the Learning NPArray
+    returnLearningNPArray = getLearningSetAsNPArray(
+        theList,
+        subDir,
+        extention
+    )
 
-    theArrays = getLearningAndVerificationArraysForTrainingOrTestList( testLists[index], dataFlavor )
+    returnVerificationNPArray = getVerificationSetNPArray(theList)
 
-    print( "Training INDEX: " + str(index) )
-    print( theArrays['LEARNING'].shape )
-    print( theArrays['VERIFICATION'].shape )
-
-    pickleLearningSet( theArrays['LEARNING'], 'TEST', dataFlavor, index )
-    pickleVerificationSet( theArrays['VERIFICATION'], 'TEST', dataFlavor, index )
-    
-
-def createLearningAndVerificationPickles():
-    """
-    Creates all the initial Learning and Verification Pickles.
-    """
-    for index in range(10):
-        for dataFlavor in allDataFlavors:
-            
-            createLearningAndVerificationPickle( index, dataFlavor )
+    return {'LEARNING': returnLearningNPArray, 'VERIFICATION': returnVerificationNPArray}
 
 
-def generateKeysForTrainingList( trainingSize ):
+def getKeysForTrainingList( dictOfLists, trainingSize ):
     """
     Generates the Training set of a certain size.
     
@@ -86,7 +179,6 @@ def generateKeysForTrainingList( trainingSize ):
     random.seed( datetime.datetime.utcnow() )
 
     # Get the Class lists
-    dictOfLists = getCSVDictAsClassesLists()
     upList = dictOfLists['upList']
     downList = dictOfLists['downList']
     naList = dictOfLists['naList']
@@ -112,16 +204,20 @@ def generateKeysForTrainingList( trainingSize ):
     
     # Then we put all the classes together
     returnTrainingList = upListTrain + downListTrain + naListTrain + holeListTrain
+
     returnTrainingList.sort()
     
-    return returnTrainingList
+    return { 'TrainingList' : returnTrainingList , 'RemainingDict' : dictOfLists }
 
 
-def generateKeysForTestingList( testSize ):
+
+
+def getKeysForATestingList( dictOfLists, testSize ):
     """
     Generates the Test set of a certain size.
     
     PARAMETERS:
+    dictOfLists: A Dictionary Containing all the class lists.
     testSize: Int of size you need.
     """
     
@@ -129,7 +225,6 @@ def generateKeysForTestingList( testSize ):
     random.seed( datetime.datetime.utcnow() )
 
     # Get the Class lists
-    dictOfLists = getCSVDictAsClassesLists()
     upList = dictOfLists['upList']
     downList = dictOfLists['downList']
     naList = dictOfLists['naList']
@@ -148,75 +243,36 @@ def generateKeysForTestingList( testSize ):
     subTestSize = int(testSize / 4)
     
     # Then we find the startIndex of the last 'testSize' samples in each class list.
+    # We slice off those last elements and put them into a list.
+    # we then replace the individual class lists in the dict with the remaining [First part] of Elements
+    # in the dict of class list.
     startIndex = len(upList)-subTestSize
-    upListTest = upList[startIndex:]
-    
+    upListLastFewElements = upList[startIndex:]
+    dictOfLists['upList'] = upList[:startIndex]
+
     startIndex = len(downList)-subTestSize
-    downListTest = downList[startIndex:]
+    downListLastFewElements = downList[startIndex:]
+    dictOfLists['downList'] = downList[:startIndex]
     
     startIndex = len(naList)-subTestSize
-    naListTest = naList[startIndex:]
+    naListLastFewElements = naList[startIndex:]
+    dictOfLists['naList'] = naList[:startIndex]
     
     startIndex = len(holeList)-subTestSize
-    holeListTest = holeList[startIndex:]  
-    
-    #Then we put all the classes together
-    returnTestList = upListTest + downListTest + naListTest + holeListTest
-    returnTestList.sort()
-    
-    return returnTestList
+    holeListLastFewElements = holeList[startIndex:]
+    dictOfLists['holeList'] = holeList[:startIndex]
 
 
-def generateKeysForTrainingAndTestingList( trainingSize, testSize ):
-    """
-    Generates a tuple of the Training and Test set of a certain size.
-    
-    PARAMETERS:
-    trainingSize: Int of size you need.
-    testSize: Int of size you need.
-    """
-    # Then we do a sanity check to make sure the Training and Test set are disjoint.
-    returnTrainingList = generateKeysForTrainingList( trainingSize )
-    returnTestList = generateKeysForTestingList( testSize )
-    
-    returnTrainingListAsSet = set( returnTrainingList )
-    returnTestListAsSet = set( returnTestList )
-    
-    if returnTrainingListAsSet.isdisjoint(returnTestListAsSet):
-        dictToReturn = {'TrainingList': returnTrainingList, 'TestList': returnTestList}
-    else:
-        dictToReturn =  { 'TrainingList': [], 'TestList': [] }
-    
-    return dictToReturn
+    # Now we put all the seperate test lasses together
+    testElementsMergedList = upListLastFewElements + \
+                             downListLastFewElements + \
+                             naListLastFewElements + \
+                             holeListLastFewElements
 
+    testElementsMergedList.sort()
 
-def generateAndPickleTrainAndTestSetFor( index ):
-    """
-    Generation of Training and Test Set and pickling.
-    
-    PARAMETERS:
-    index: Int of the index
-    """
-    theLists = generateKeysForTrainingAndTestingList(100,20)
+    return { 'TestList' : testElementsMergedList , 'RemainingDict' : dictOfLists }
 
-    # Pick a NORM or FLOP for each TrainingTest element.
-    theLists['TrainingList'] = pickNormOrFlopForTrainingTestingLists( theLists['TrainingList'] )
-    theLists['TestList'] = pickNormOrFlopForTrainingTestingLists( theLists['TestList'] )
-
-    pickleTrainAndTestList( theLists['TrainingList'], theLists['TestList'], index )
-
-
-def generateAndPickleTrainAndTestSets():
-    """
-    Combo Generation of Training and Test Set and pickling.
-    """
-    # Generate 10 training lists.
-    for index in range(10):
-        generateAndPickleTrainAndTestSetFor( index )
-    
-    print("Sets Generated and Pickled")
-    
-    
 
 def getDataDictOfTestList( theList ):
     """
@@ -225,44 +281,55 @@ def getDataDictOfTestList( theList ):
     PARAMETERS:
     theList = A list of the keys of the train/test set.
     """
-    
-    dataDict = getDictFromDataCSVFile()
-    
+
+    dataDict = getDictFromSEARDCInfoCSVFile()
+
     returnDict = {}
-    
+
     for element in theList:
-        
+
         asString = str(element)
         minusLast = asString[:-1]
         asIntAgain = int(minusLast)
-        
+
         returnDict[asIntAgain] = dataDict[asIntAgain]
-    
+
     return returnDict
     
 
-def getCSVDictAsClassesLists():
+def getDictOfClassLists():
     """
     Get the CSV Data Classes as lists.
     """
+
+    searDCInfoCSVDict = getDictFromSEARDCInfoCSVFile()
+
     upList = []
     downList = []
     naList = []
     holeList = []
     
-    csvDataDict = getDictFromDataCSVFile()
+    searDCInfoCSVDict = getDictFromSEARDCInfoCSVFile()
 
     for key in getListOfDataCSVFileKeys():
-        if (csvDataDict[key]['CLASS'] == 'UP'):
-            upList.append( key )
-        if (csvDataDict[key]['CLASS'] == 'DOWN'):
-            downList.append( key )
-        if (csvDataDict[key]['CLASS'] == 'NA'):
-            naList.append( key )
-        if (csvDataDict[key]['CLASS'] == 'HOLE'):
-            holeList.append( key )
-                
-    return {'upList': upList, 'downList': downList, 'naList': naList, 'holeList' : holeList}
+        if (searDCInfoCSVDict[key]['CLASS'] == 'UP'):
+            oneAndZeroVersion = getNormAndFlopVersionFor(key)
+            upList.append( oneAndZeroVersion[0] )
+            upList.append( oneAndZeroVersion[1] )
+        if (searDCInfoCSVDict[key]['CLASS'] == 'DOWN'):
+            oneAndZeroVersion = getNormAndFlopVersionFor(key)
+            downList.append( oneAndZeroVersion[0] )
+            downList.append( oneAndZeroVersion[1] )
+        if (searDCInfoCSVDict[key]['CLASS'] == 'NA'):
+            oneAndZeroVersion = getNormAndFlopVersionFor(key)
+            naList.append( oneAndZeroVersion[0] )
+            naList.append( oneAndZeroVersion[1] )
+        if (searDCInfoCSVDict[key]['CLASS'] == 'HOLE'):
+            oneAndZeroVersion = getNormAndFlopVersionFor(key)
+            holeList.append( oneAndZeroVersion[0] )
+            holeList.append( oneAndZeroVersion[1])
+
+    return { 'upList': upList, 'downList': downList, 'naList': naList, 'holeList' : holeList }
 
 
 def getDepthCSVFileAsNPArray( theCSVFile ):
@@ -292,22 +359,22 @@ def getDepthCSVFileAsNPArray( theCSVFile ):
 
 
 
-def getDictFromDataCSVFile():
+def getDictFromSEARDCInfoCSVFile():
     """
     Reads the Data CSV File.
     
     Returns:
     A Dictionary
     """
-    dataCSVFileDict = {}
+    searDCInfoCSVFileAsDict = {}
 
-    with open(searCSVInfoFile, newline='') as csvFile:
+    with open( searCSVInfoFile, newline='') as csvFile:
         csvReader = csv.reader(csvFile, delimiter=',')
         for row in csvReader:
             data =  {'ANGLE': float(row[1]), 'CLASS': row[2], 'TYPE': row[3]}
-            dataCSVFileDict[ int(row[0]) ] = data
+            searDCInfoCSVFileAsDict[ int(row[0]) ] = data
 
-    return dataCSVFileDict
+    return searDCInfoCSVFileAsDict
 
 
     
@@ -322,8 +389,26 @@ def getImageFileAsNPArray( theImageFile ):
     Numpy Array
     """
     # The 'L' allow convertion to grayscale.
-    theImage = PIL.Image.open(theImageFile).convert("L")
+    theImage = Image.open(theImageFile).convert("L")
+
+    # theImage = PIL.Image.open(theImageFile).convert("L")
     return np.array(theImage)/255.0
+
+
+def getNormAndFlopVersionFor( aKey ):
+    """
+    Generate the Norm and Flop keys for aKey.
+    Args:
+        aKey: A Data Key [Int]
+
+    Returns:
+        A List of both versions.
+    """
+    asAString = str(aKey)
+    addAZero = asAString + '0'
+    addAOne = asAString + '1'
+
+    return ( int(addAZero), int(addAOne) )
 
 
 def getListOfDataCSVFileKeys():
@@ -334,7 +419,7 @@ def getListOfDataCSVFileKeys():
     A List
     """
 
-    return list( getDictFromDataCSVFile().keys() )
+    return list( getDictFromSEARDCInfoCSVFile().keys() )
 
 
 
@@ -363,56 +448,16 @@ def getLearningSetAsNPArray( theTrainingList, targetDataDirectory, fileExtention
     return trainingArray
 
 
-def getLearningAndVerificationArraysForTrainingOrTestList( theList, dataFlavor ):
-    """
-    Get the Learning and Verification NPArrays
-    
-    PARAMETERS:
-    typeOfList: String, 'TRAIN' or 'TEST"
-    IDNum: Int of ID
-    """
-    
-    print( dataFlavor in allDataFlavors )
-    
-    
-    if( dataFlavor in allDataFlavors):        
-        theArrays = getNPArraysFor( theList, dataFlavor )
-        return theArrays
-    
-    else:
-        return None
-    
-
-
-def getNPArraysFor( theList, dataFlavor ):
-    """
-    Gets the NPArrays for a given list of Elements.
-    
-    PARAMETERS:
-        theList: A List of element Keys
-        dataFlavor: String of What type of Data we are looking at
-            ['ICOLOR', 'IDEPTH', 'PCLOUD']
-    """
-    
-    dataFlavorInfo = getSubDirectoryAndEXTForDataFlavor( dataFlavor )
-    
-    subDir = dataFlavorInfo['SubDir']
-    extention = dataFlavorInfo['EXT']
-    
-    # Get the Learning NPArray
-    returnLearningNPArray = getLearningSetAsNPArray( 
-        theList, 
-        subDir, 
-        extention 
-    )
-    
-    returnVerificationNPArray = getVerificationSetNPArray( theList )
-
-    return { 'LEARNING' : returnLearningNPArray, 'VERIFICATION' : returnVerificationNPArray }
-
-
 def getNumeralValueOf( theClass ):
-    
+    """
+    Get Numberal Class of a class
+    Args:
+        theClass: the Class as String
+
+    Returns:
+        An Int
+    """
+
     if (theClass=="NA"):
         return 0
     elif (theClass=="UP"):
@@ -539,6 +584,36 @@ def pickNormOrFlopForTrainingTestingLists( theList ):
     return returnList
 
 
+def pickleTrainingList( theTrainingList, nameID):
+    """
+
+    Args:
+        theTestList:  The Test Set to Pickle
+        nameID: Its IS
+
+    Returns:
+
+    """
+
+    trainingPickleFileName = os.path.join(pickleDataDir, ('TRAINING_LIST_' + str(nameID) + '.pkl'))
+    pickle.dump( theTrainingList, open(trainingPickleFileName, 'wb' ))
+
+
+def pickleTestList( theTestList, nameID ):
+    """
+
+    Args:
+        theTestList:  The Test Set to Pickle
+        nameID: Its IS
+
+    Returns:
+
+    """
+
+    testPickleFileName = os.path.join(pickleDataDir, ( 'TEST_LIST_' + str(nameID) + '.pkl'))
+    pickle.dump( theTestList, open(testPickleFileName, 'wb' ))
+
+
 def pickleTrainAndTestList( theTrainingList, theTestList, nameID ):
     """
     Pickle the Training and Test Lists
@@ -556,9 +631,9 @@ def pickleTrainAndTestList( theTrainingList, theTestList, nameID ):
     
     pickle.dump( theTrainingList, open( trainingPickleFileName, 'wb' ) )
     pickle.dump( theTestList, open( testPickleFileName, 'wb' ) )
-    
+
       
-def pickleLearningSet( learningNPArray, dataType, ofDataFlavor, withNameID ):
+def pickleLearningSet( learningNPArray, trainingOrTestType, ofDataFlavor, withNameID ):
     """
     Pickles the NP Array
     
@@ -566,7 +641,7 @@ def pickleLearningSet( learningNPArray, dataType, ofDataFlavor, withNameID ):
     theNPArray: The Numpy Array of the Training Set
     nameID: Int of the ID number.
     """
-    stringOfFileName = dataType + '_' + str(withNameID) + '_LEARNING_' + ofDataFlavor + '_npArray.pkl'
+    stringOfFileName = trainingOrTestType + '_' + str(withNameID) + '_LEARNING_' + ofDataFlavor + '_npArray.pkl'
     
     fullPathFileName = os.path.join( 
         pickleDataDir,
@@ -578,7 +653,7 @@ def pickleLearningSet( learningNPArray, dataType, ofDataFlavor, withNameID ):
     pickle.dump( learningNPArray , open( fullPathFileName, 'wb') )
 
     
-def pickleVerificationSet( verificationNPArray, dataType, dataFlavor, withNameID ):
+def pickleVerificationSet( verificationNPArray, trainingOrTestType, dataFlavor, withNameID ):
     """
     Pickles the NP Array
     
@@ -586,7 +661,7 @@ def pickleVerificationSet( verificationNPArray, dataType, dataFlavor, withNameID
     theNPArray: The Numpy Array of the Training Set
     nameID: Int of the ID number.
     """
-    stringOfFileName = dataType + '_' + str(withNameID) + '_VERIFICATION_' + dataFlavor + '_npArray.pkl'
+    stringOfFileName = trainingOrTestType + '_' + str(withNameID) + '_VERIFICATION_' + dataFlavor + '_npArray.pkl'
     
     fullPathFileName = os.path.join( 
         pickleDataDir,
@@ -712,3 +787,4 @@ def unpickleTestLists():
 # (Have no idea why that would ever happen)
 if __name__ == "__main__":
     CS660DataManagementCheck()
+    createAllBasicData()
