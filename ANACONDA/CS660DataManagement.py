@@ -704,7 +704,7 @@ def reportStats():
     NAs = 0
     HOLEs = 0
 
-    dataDict = getDictFromDataCSVFile()
+    dataDict = getDictFromSEARDCInfoCSVFile()
     
     for key in getListOfDataCSVFileKeys():
         if (dataDict[key]['CLASS'] == 'UP'):
@@ -723,13 +723,13 @@ def reportStats():
     print( "HOLEs: " + str(HOLEs) )
     
     
-def reshape(trainingSet):
-    """
-    This is to add the 'Channels' Dimension for Keras.
-    """
-    getShape = trainingSet.shape
-    newShape = getShape + (1,)
-    return trainingSet.reshape(newShape)
+# def reshape( theTrainingSet ):
+#     """
+#     This is to add the 'Channels' Dimension for Keras.
+#     """
+#     getShape = theTrainingSet.shape
+#     newShape = getShape + (1,)
+#     return theTrainingSet.reshape(newShape)
     
     
 def unpickleTrainAndTestList( nameID ):
@@ -788,3 +788,4 @@ def unpickleTestLists():
 if __name__ == "__main__":
     CS660DataManagementCheck()
     createAllBasicData()
+    reportStats()
