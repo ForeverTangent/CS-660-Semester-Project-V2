@@ -468,6 +468,42 @@ def getNumeralValueOf( theClass ):
         return None
 
 
+
+
+def getTrainingList( nameID ):
+    """
+    Unpickle the Training and Test, Learning and Verification Arrays for a session.
+
+    PARAMETERS:
+    nameID: String of the set ID.
+    dataFlavor: String of dataFlavor ['ICOLOR', 'IDEPTH', 'PCLOUD']
+    """
+    # Just in case an Int get passed in.
+    nameID = str(nameID)
+
+    theLists = unpickleTrainAndTestList( nameID )
+
+    return theLists['TrainingList']
+
+
+
+def getTestList( nameID ):
+    """
+    Unpickle the Training and Test, Learning and Verification Arrays for a session.
+
+    PARAMETERS:
+    nameID: String of the set ID.
+    dataFlavor: String of dataFlavor ['ICOLOR', 'IDEPTH', 'PCLOUD']
+    """
+    # Just in case an Int get passed in.
+    nameID = str(nameID)
+
+    theLists = unpickleTrainAndTestList( nameID )
+
+    return theLists['TestList']
+
+
+
 def getVerificationSetNPArray( theList ):
     """
     Gets the list of testing elements as an NP Array
@@ -562,7 +598,7 @@ def load_dataset( nameID, dataFlavor ):
             )
 
 
-def load_datasetAndGetBaseLists(nameID, dataFlavor):
+def load_datasetAndGetBaseLists( nameID, dataFlavor ):
     """
     Unpickle the Training and Test, Learning and Verification Arrays for a session.
 
@@ -582,11 +618,6 @@ def load_datasetAndGetBaseLists(nameID, dataFlavor):
         ('TRAINING_' + nameID + '_VERIFICATION_' + dataFlavor + '_npArray.pkl')
     )
 
-    trainingBaseListFileName = os.path.join(
-        pickleDataDir,
-        ('TRAINING_LIST_' + nameID + '.pkl')
-    )
-
     testLearningPickleFileName = os.path.join(
         pickleDataDir, ('TEST_' + nameID + '_LEARNING_' + dataFlavor + '_npArray.pkl')
     )
@@ -594,25 +625,20 @@ def load_datasetAndGetBaseLists(nameID, dataFlavor):
         pickleDataDir, ('TEST_' + nameID + '_VERIFICATION_' + dataFlavor + '_npArray.pkl')
     )
 
-    testBaseListFileName = os.path.join(
-        pickleDataDir,
-        ('TEST_LIST_' + nameID + '.pkl')
-    )
+    theLists = unpickleTrainAndTestList( nameID )
 
     trainingLearningSet = pickle.load(open(trainingLearningPickleFileName, 'rb'))
     trainingVerificationSet = pickle.load(open(trainingVerificationPickleFileName, 'rb'))
-    trainingBaseList = pickle.load(open(trainingBaseListFileName, 'rb'))
     testLearningSet = pickle.load(open(testLearningPickleFileName, 'rb'))
     testVerificationSet = pickle.load(open(testVerificationPickleFileName, 'rb'))
-    testBaseList = pickle.load(open(testBaseListFileName, 'rb'))
 
     return (
         trainingLearningSet,
         trainingVerificationSet,
-        trainingBaseList,
+        theLists['TrainingList'],
         testLearningSet,
         testVerificationSet,
-        testBaseList
+        theLists['TestList'],
     )
 
 
@@ -791,8 +817,8 @@ def unpickleTrainAndTestList( nameID ):
     # Just in case an Int get passed in.
     nameID = str(nameID)
     
-    trainingPickleFileName = os.path.join( pickleDataDir, ('SET_' + nameID + '_TRAINING.pkl') )
-    testPickleFileName = os.path.join( pickleDataDir, ('SET_' + nameID + '_TEST.pkl') )
+    trainingPickleFileName = os.path.join( pickleDataDir, ('TRAINING_LIST_' + nameID + '.pkl') )
+    testPickleFileName = os.path.join( pickleDataDir, ('TEST_LIST_' + nameID + '.pkl') )
     
     trainingSet = pickle.load( open( trainingPickleFileName, 'rb' ) )
     testSet = pickle.load( open( testPickleFileName, 'rb' ) )
