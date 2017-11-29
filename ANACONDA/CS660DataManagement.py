@@ -210,8 +210,6 @@ def getKeysForTrainingList( dictOfLists, trainingSize ):
     return { 'TrainingList' : returnTrainingList , 'RemainingDict' : dictOfLists }
 
 
-
-
 def getKeysForATestingList( dictOfLists, testSize ):
     """
     Generates the Test set of a certain size.
@@ -534,36 +532,90 @@ def load_dataset( nameID, dataFlavor ):
     """
     # Just in case an Int get passed in.
     nameID = str(nameID)
-    
-    trainingLearningPickleFileName = os.path.join( 
-            pickleDataDir, 
-            ('TRAINING_' + nameID + '_LEARNING_' + dataFlavor + '_npArray.pkl') 
+
+    trainingLearningPickleFileName = os.path.join(
+            pickleDataDir,
+            ('TRAINING_' + nameID + '_LEARNING_' + dataFlavor + '_npArray.pkl')
             )
-    trainingVerificationPickleFileName = os.path.join( 
-            pickleDataDir, 
-            ('TRAINING_' + nameID + '_VERIFICATION_' + dataFlavor + '_npArray.pkl') 
+    trainingVerificationPickleFileName = os.path.join(
+            pickleDataDir,
+            ('TRAINING_' + nameID + '_VERIFICATION_' + dataFlavor + '_npArray.pkl')
             )
-    testLearningPickleFileName = os.path.join( 
-            pickleDataDir, ('TEST_' + nameID + '_LEARNING_' + dataFlavor + '_npArray.pkl') 
+    testLearningPickleFileName = os.path.join(
+            pickleDataDir, ('TEST_' + nameID + '_LEARNING_' + dataFlavor + '_npArray.pkl')
             )
-    testVerificationPickleFileName = os.path.join( 
-            pickleDataDir, ('TEST_' + nameID + '_VERIFICATION_' + dataFlavor + '_npArray.pkl') 
+    testVerificationPickleFileName = os.path.join(
+            pickleDataDir, ('TEST_' + nameID + '_VERIFICATION_' + dataFlavor + '_npArray.pkl')
             )
-    
-    
+
+
     trainingLearningSet = pickle.load( open( trainingLearningPickleFileName, 'rb' ) )
     trainingVerificationSet = pickle.load( open( trainingVerificationPickleFileName, 'rb' ) )
     testLearningSet = pickle.load( open( testLearningPickleFileName, 'rb' ) )
     testVerificationSet = pickle.load( open( testVerificationPickleFileName, 'rb' ) )
-    
-    return  ( 
+
+    return  (
             trainingLearningSet,
             trainingVerificationSet,
             testLearningSet,
             testVerificationSet
             )
 
-    
+
+def load_datasetAndGetBaseLists(nameID, dataFlavor):
+    """
+    Unpickle the Training and Test, Learning and Verification Arrays for a session.
+
+    PARAMETERS:
+    nameID: String of the set ID.
+    dataFlavor: String of dataFlavor ['ICOLOR', 'IDEPTH', 'PCLOUD']
+    """
+    # Just in case an Int get passed in.
+    nameID = str(nameID)
+
+    trainingLearningPickleFileName = os.path.join(
+        pickleDataDir,
+        ('TRAINING_' + nameID + '_LEARNING_' + dataFlavor + '_npArray.pkl')
+    )
+    trainingVerificationPickleFileName = os.path.join(
+        pickleDataDir,
+        ('TRAINING_' + nameID + '_VERIFICATION_' + dataFlavor + '_npArray.pkl')
+    )
+
+    trainingBaseListFileName = os.path.join(
+        pickleDataDir,
+        ('TRAINING_LIST_' + nameID + '.pkl')
+    )
+
+    testLearningPickleFileName = os.path.join(
+        pickleDataDir, ('TEST_' + nameID + '_LEARNING_' + dataFlavor + '_npArray.pkl')
+    )
+    testVerificationPickleFileName = os.path.join(
+        pickleDataDir, ('TEST_' + nameID + '_VERIFICATION_' + dataFlavor + '_npArray.pkl')
+    )
+
+    testBaseListFileName = os.path.join(
+        pickleDataDir,
+        ('TEST_LIST_' + nameID + '.pkl')
+    )
+
+    trainingLearningSet = pickle.load(open(trainingLearningPickleFileName, 'rb'))
+    trainingVerificationSet = pickle.load(open(trainingVerificationPickleFileName, 'rb'))
+    trainingBaseList = pickle.load(open(trainingBaseListFileName, 'rb'))
+    testLearningSet = pickle.load(open(testLearningPickleFileName, 'rb'))
+    testVerificationSet = pickle.load(open(testVerificationPickleFileName, 'rb'))
+    testBaseList = pickle.load(open(testBaseListFileName, 'rb'))
+
+    return (
+        trainingLearningSet,
+        trainingVerificationSet,
+        trainingBaseList,
+        testLearningSet,
+        testVerificationSet,
+        testBaseList
+    )
+
+
 def pickNormOrFlopForTrainingTestingLists( theList ):
     """
     Add '1' or '0' to pick a norm or flop version of picture.
