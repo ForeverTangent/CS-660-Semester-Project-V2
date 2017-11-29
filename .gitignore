@@ -8,7 +8,6 @@ __pycache__/
 
 # Data directory
 /DATA
-/WEIGHTS
 /TENSOR_LOGS_ARCHIVE
 /TENSOR_LOGS
 

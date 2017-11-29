@@ -223,7 +223,7 @@ class NNExploration():
             json_file.write(model_json)
 
 
-    def saveModelWeights(self, weights, weightName ):
+    def saveModelWeights(self, model, weightName ):
         """
         Saved the Model Weights
         Args:

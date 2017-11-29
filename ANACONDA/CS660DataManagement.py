@@ -496,7 +496,6 @@ def getVerificationSetNPArray( theList ):
     return returnNPArray
 
 
-
 def getSubDirectoryAndEXTForDataFlavor( dataFlavor ):
     """
     Gets the SubDirection and Extention for the Data we are analysing.
@@ -563,8 +562,6 @@ def load_dataset( nameID, dataFlavor ):
             testLearningSet,
             testVerificationSet
             )
-
-
 
     
 def pickNormOrFlopForTrainingTestingLists( theList ):
