@@ -468,6 +468,28 @@ def getNumeralValueOf( theClass ):
         return None
 
 
+def getClassFromNumeral( value ):
+    """
+    Get Numberal Class of a class
+    Args:
+        theClass: the Class as String
+
+    Returns:
+        An Int
+    """
+
+    if (value==0):
+        return 'NA'
+    elif (value==1):
+        return 'UP'
+    elif (value==2):
+        return 'DOWN'
+    elif (value==3):
+        return 'HOLE'
+    else:
+        return None
+
+
 
 
 def getTrainingList( nameID ):
