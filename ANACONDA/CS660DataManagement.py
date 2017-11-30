@@ -272,6 +272,20 @@ def getKeysForATestingList( dictOfLists, testSize ):
     return { 'TestList' : testElementsMergedList , 'RemainingDict' : dictOfLists }
 
 
+def getDateTimeAsString():
+    """
+    Get the Current Date Time as a String
+    RETURNS:
+        A String of the Current date time.
+    """
+    theNow = datetime.datetime.now().timetuple()
+    theString = ''
+    for index in range(6):
+        theString = theString + '-' + str(theNow[index])
+
+    return theString
+
+
 def getDataDictOfTestList( theList ):
     """
     Gets a Dict of the CSV Info Data for the generated training/test set.
@@ -580,13 +594,16 @@ def getSubDirectoryAndEXTForDataFlavor( dataFlavor ):
         
 
 
-def load_dataset( nameID, dataFlavor ):
+def loadTrainingAndTestDataset( nameID, dataFlavor ):
     """
     Unpickle the Training and Test, Learning and Verification Arrays for a session.
 
     PARAMETERS:
     nameID: String of the set ID.
     dataFlavor: String of dataFlavor ['ICOLOR', 'IDEPTH', 'PCLOUD']
+
+    RETURNS:
+        NPArray
     """
     # Just in case an Int get passed in.
     nameID = str(nameID)
@@ -620,25 +637,19 @@ def load_dataset( nameID, dataFlavor ):
             )
 
 
-def load_datasetAndGetBaseLists( nameID, dataFlavor ):
+def loadTestOnlyDataset( nameID, dataFlavor ):
     """
     Unpickle the Training and Test, Learning and Verification Arrays for a session.
 
     PARAMETERS:
     nameID: String of the set ID.
     dataFlavor: String of dataFlavor ['ICOLOR', 'IDEPTH', 'PCLOUD']
+
+    RETURNS:
+        NPArray
     """
     # Just in case an Int get passed in.
     nameID = str(nameID)
-
-    trainingLearningPickleFileName = os.path.join(
-        pickleDataDir,
-        ('TRAINING_' + nameID + '_LEARNING_' + dataFlavor + '_npArray.pkl')
-    )
-    trainingVerificationPickleFileName = os.path.join(
-        pickleDataDir,
-        ('TRAINING_' + nameID + '_VERIFICATION_' + dataFlavor + '_npArray.pkl')
-    )
 
     testLearningPickleFileName = os.path.join(
         pickleDataDir, ('TEST_' + nameID + '_LEARNING_' + dataFlavor + '_npArray.pkl')
@@ -649,18 +660,12 @@ def load_datasetAndGetBaseLists( nameID, dataFlavor ):
 
     theLists = unpickleTrainAndTestList( nameID )
 
-    trainingLearningSet = pickle.load(open(trainingLearningPickleFileName, 'rb'))
-    trainingVerificationSet = pickle.load(open(trainingVerificationPickleFileName, 'rb'))
     testLearningSet = pickle.load(open(testLearningPickleFileName, 'rb'))
     testVerificationSet = pickle.load(open(testVerificationPickleFileName, 'rb'))
 
     return (
-        trainingLearningSet,
-        trainingVerificationSet,
-        theLists['TrainingList'],
         testLearningSet,
-        testVerificationSet,
-        theLists['TestList'],
+        testVerificationSet
     )
 
 
