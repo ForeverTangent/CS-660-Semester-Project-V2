@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="426d49aa-b003-4561-9ed1-3281143e61a6" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CS-660-SP-Notebook-1-V2.ipynb" afterPath="$PROJECT_DIR$/CS-660-SP-Notebook-1-V2.ipynb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CS660DataManagement.py" afterPath="$PROJECT_DIR$/CS660DataManagement.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HumanOracle.py" afterPath="$PROJECT_DIR$/HumanOracle.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/NNExploration.py" afterPath="$PROJECT_DIR$/NNExploration.py" />
-    </list>
+    <list default="true" id="426d49aa-b003-4561-9ed1-3281143e61a6" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
