@@ -283,6 +283,71 @@ class NNExploration():
                   )
 
 
+def loadModel( modelName ):
+    """
+    Loads the Model.
+    """
+    theModel = load_model( os.path.join( modelsDirectory, modelName) )
+    print('MODEL Loaded.')
+    return theModel
+
+
+def saveModelEverything(theModel, modelName):
+    """
+    Saved Everything in regards to the model.
+    """
+    saveModelStructure(theModel, modelName)
+    saveModel(theModel, modelName)
+    saveModelJSON(theModel, modelName)
+    saveModelWeights(theModel, modelName)
+
+    print("Model Everything Saved")
+
+
+def saveModelStructure(theModel, modelStructureName):
+    """
+    Saves an image of the Model Structure.
+    """
+    modelStructsFilePath = os.path.join(modelsStructsDirectory, modelStructureName)
+    plot_model(theModel, to_file=modelStructsFilePath)
+
+
+def saveModelJSON(model, modelName):
+    """
+    Saves the Model as JSON
+    Args:
+        model: the Keras NN Model
+        modelName: the Name
+
+    Returns:
+
+    """
+    modelFilePath = os.path.join(modelsDirectory, modelName + '.json')
+    model_json = theModel.to_json()
+    with open(modelFilePath, 'w') as json_file:
+        json_file.write(model_json)
+
+
+def saveModel(model, modelName):
+    """
+    Save the model, in Keras [h5] format.
+    """
+    theModel.save(os.path.join(modelsDirectory, modelName))
+
+
+def saveModelWeights(theModel, modelName):
+    """
+    Saved the Model Weights
+    Args:
+        weights: The Weights
+        weightName: Weight Names
+
+    Returns:
+
+    """
+    weightsFilePath = os.path.join(weightsDirectory, modelName + '.h5')
+    theModel.save_weights(weightsFilePath)
+
 
 def recordNNTestResults( somethingToWrite ):
 

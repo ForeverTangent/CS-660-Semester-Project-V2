@@ -637,6 +637,54 @@ def loadTrainingAndTestDataset( nameID, dataFlavor ):
             )
 
 
+def loadTrainingAndTestDatasetAndLists( nameID, dataFlavor ):
+    """
+    Unpickle the Training and Test, Learning and Verification Arrays for a session.
+
+    PARAMETERS:
+    nameID: String of the set ID.
+    dataFlavor: String of dataFlavor ['ICOLOR', 'IDEPTH', 'PCLOUD']
+
+    RETURNS:
+        NPArray
+    """
+    # Just in case an Int get passed in.
+    nameID = str(nameID)
+
+    trainingLearningPickleFileName = os.path.join(
+            pickleDataDir,
+            ('TRAINING_' + nameID + '_LEARNING_' + dataFlavor + '_npArray.pkl')
+            )
+    trainingVerificationPickleFileName = os.path.join(
+            pickleDataDir,
+            ('TRAINING_' + nameID + '_VERIFICATION_' + dataFlavor + '_npArray.pkl')
+            )
+    testLearningPickleFileName = os.path.join(
+            pickleDataDir, ('TEST_' + nameID + '_LEARNING_' + dataFlavor + '_npArray.pkl')
+            )
+    testVerificationPickleFileName = os.path.join(
+            pickleDataDir, ('TEST_' + nameID + '_VERIFICATION_' + dataFlavor + '_npArray.pkl')
+            )
+
+    trainingTestLists = unpickleTrainAndTestList( nameID )
+
+
+    trainingLearningSet = pickle.load( open( trainingLearningPickleFileName, 'rb' ) )
+    trainingVerificationSet = pickle.load( open( trainingVerificationPickleFileName, 'rb' ) )
+    testLearningSet = pickle.load( open( testLearningPickleFileName, 'rb' ) )
+    testVerificationSet = pickle.load( open( testVerificationPickleFileName, 'rb' ) )
+
+    return  (
+            trainingLearningSet,
+            trainingVerificationSet,
+            testLearningSet,
+            testVerificationSet,
+            trainingTestLists['TrainingList'],
+            trainingTestLists['TestList']
+            )
+
+
+
 def loadTestOnlyDataset( nameID, dataFlavor ):
     """
     Unpickle the Training and Test, Learning and Verification Arrays for a session.

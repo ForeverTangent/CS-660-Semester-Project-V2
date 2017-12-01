@@ -1,0 +1,2 @@
+TestLoss,TestAccuracy,NA,UP,DOWN,HOLE
+0.90324896574,0.6,0.9,0.9,0.1,0.5,DOWN

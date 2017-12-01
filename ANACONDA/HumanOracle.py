@@ -70,6 +70,166 @@ searCSVInfoFile = os.path.join( combinedDataDir, 'SEAR_DC_INFO.csv' )
 csDM.CS660DataManagementCheck()
 
 
+def getElementsAddedToTrainingSetFileName():
+    """
+    """
+    theFileName = 'JUPYTER_ADDED_ELEMENTS_RECORD' + csDM.getDateTimeAsString() + '.txt'
+    return theFileName
+
+
+def getTrainingPredictionResultsFileName():
+    """
+    """
+    theFileName = 'JUPYTER_TRAIN_PREDICTION_RESULTS' + csDM.getDateTimeAsString() + '.txt'
+    return theFileName
+
+
+def recordElementsAddedToTrainingSet(currentFileName, nameOfClassAdded, elementsList):
+    """
+    Record the Training and Predictions Results.
+    """
+    trainingPredictionResultsPath = os.path.join(resultsDirectory, currentFileName)
+
+    classAndElements = []
+    classAndElements.append(nameOfClassAdded)
+    classAndElements = classAndElements + elementsList
+
+    print(classAndElements)
+
+    with open(trainingPredictionResultsPath, 'a', newline='\n') as csvfile:
+        csvWriter = csv.writer(
+            csvfile,
+            delimiter=','
+        )
+        csvWriter.writerow(classAndElements)
+
+
+def recordTrainingPredictionResults(currentFileName, scoringResults, lowestScoringClassName):
+    """
+    Record the Training and Predictions Results.
+    """
+    trainingPredictionResultsPath = os.path.join(resultsDirectory, currentFileName)
+    allScoringInfo = scoringResults['SCORE'] + scoringResults['SCORELIST']
+    allScoringInfo.append(lowestScoringClassName)
+
+    print(allScoringInfo)
+
+    if (not os.path.exists(trainingPredictionResultsPath)):
+        headers = ['TestLoss', 'TestAccuracy', 'NA', 'UP', 'DOWN', 'HOLE']
+        with open(trainingPredictionResultsPath, 'w', newline='\n') as csvfile:
+            csvWriter = csv.writer(
+                csvfile,
+                delimiter=','
+            )
+            csvWriter.writerow(headers)
+            csvWriter.writerow(allScoringInfo)
+
+    else:
+        print(allScoringInfo)
+        with open(trainingPredictionResultsPath, 'a', newline='\n') as csvfile:
+            csvWriter = csv.writer(
+                csvfile,
+                delimiter=','
+            )
+            csvWriter.writerow(allScoringInfo)
+
+
+def reportOracle(status):
+    """
+    """
+    oracleReportPath = os.path.join(resultsDirectory, 'JUPYTER_ORACLE_REPORT.txt')
+    fileToWrite = open(oracleReportPath, 'a')
+    fileToWrite.write(status + '\n')
+    fileToWrite.close()
+
+
+def getLowestScoringCategory(scoringListAsPecents):
+    """
+    Get the index of the lowest scoring category.
+    """
+
+    lowestCategoryPercent = 1.0
+    currentLowestIndex = 0
+
+    for index in range(len(scoringListAsPecents)):
+        currentCategoryPercent = scoringListAsPecents[index]
+        if (currentCategoryPercent < lowestCategoryPercent):
+            currentLowestIndex = index
+            lowestCategoryPercent = currentCategoryPercent
+
+    return currentLowestIndex
+
+
+def addNewSamplesToTrainingSet(trainingList, newSamples):
+    """
+    Merge the new samples with the Training set.
+    """
+    return trainingList + newSamples
+
+
+def getSamplesFromAClass(classType, trainingList, allTestListsCombined, numberOfSamples=20):
+    """
+    Get multiple samples from a class.
+    """
+    newSamples = []
+
+    for index in range(numberOfSamples):
+        newSample = getASampleOfClass(classType, trainingList, allTestListsCombined)
+        newSamples.append(newSample)
+
+    return newSamples
+
+
+def getASampleOfClass(classType, trainingList, allTestListsCombined):
+    """
+    Get a Sample from a Specific class that isn't being trained on yet.
+    """
+
+    classTypeToRetreive = ''
+
+    if (classType == 'UP'):
+        classTypeToRetreive = 'upList'
+    elif (classType == 'DOWN'):
+        classTypeToRetreive = 'downList'
+    elif (classType == 'NA'):
+        classTypeToRetreive = 'naList'
+    elif (classType == 'HOLE'):
+        classTypeToRetreive = 'holeList'
+
+    random.seed(datetime.datetime.utcnow())
+
+    dataClassList = csDM.getDictOfClassLists()
+
+    trainingListAsSet = set(trainingList)
+    allTestListsCombinedAsSet = set(allTestListsCombined)
+
+    allElementsOfClass = dataClassList[classTypeToRetreive]
+
+    selectedSample = random.choice(allElementsOfClass)
+
+    while ((selectedSample in trainingListAsSet) or (selectedSample in allTestListsCombinedAsSet)):
+        selectedSample = random.choice(allElementsOfClass)
+
+    return selectedSample
+
+
+def getAllTestLists():
+    """
+    Gets all the test lists.
+    Returns:
+        A Dict of the test lists.
+    """
+    allTestLists = []
+    allTestListCombined = []
+
+    for index in range(5):
+        allTestLists.append(csDM.getTestList(index))
+        allTestListCombined = allTestListCombined + csDM.getTestList(index)
+
+    return {'TestLists': allTestLists, 'CombinedTestLists': allTestListCombined}
+
+
+
 
 
 
@@ -78,6 +238,4 @@ csDM.CS660DataManagementCheck()
 if __name__ == "__main__":
     """
     """
-    print("")
-    print("If I am running you are doing everything wrong.")
     print("__main__ Done.")
