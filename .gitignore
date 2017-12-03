@@ -10,6 +10,8 @@ __pycache__/
 /DATA
 /TENSOR_LOGS_ARCHIVE
 /TENSOR_LOGS
+/MODELS.zip
+/WEIGHTS.zip
 
 # Distribution / packaging
 .Python

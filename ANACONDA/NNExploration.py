@@ -5,7 +5,15 @@ Created on Thu Nov 23 01:10:35 2017
 
 I have to admit, a lot of this file is sort of hackey [not exactly elegant].
 
+I apologize for that.  I will clean up later if I can.
+
 Don't hold it against me it got the job done.
+
+This file holds the basic functions to build and manipulate the CNN.
+
+I was trying to wrap it all into a class 'NNExplortation' but ended up not needing that.
+
+Still I left the early version of the class in class I revisit later.
 
 
 @author: staque
@@ -90,6 +98,234 @@ allDataFlavors = imageDirs + csvDirs
 
 #Load main data file.
 # searCSVInfoFile = os.path.join( combinedDataDir, 'SEAR_DC_INFO.csv' )
+
+
+
+def loadModel( modelName ):
+    """
+    Loads the Model.
+    """
+    theModel = load_model( os.path.join( modelsDirectory, modelName) )
+    print('MODEL Loaded.')
+    return theModel
+
+
+def saveModelEverything(theModel, modelName):
+    """
+    Saved Everything in regards to the model.
+    """
+    saveModelStructure(theModel, modelName)
+    saveModel(theModel, modelName)
+    saveModelJSON(theModel, modelName)
+    saveModelWeights(theModel, modelName)
+
+    print("Model Everything Saved")
+
+
+def saveModelStructure(theModel, modelStructureName):
+    """
+    Saves an image of the Model Structure.
+    """
+    modelStructsFilePath = os.path.join(modelsStructsDirectory, modelStructureName)
+    plot_model(theModel, to_file=modelStructsFilePath)
+
+
+def saveModelJSON(theModel, modelName):
+    """
+    Saves the Model as JSON
+    Args:
+        model: the Keras NN Model
+        modelName: the Name
+
+    Returns:
+
+    """
+    modelFilePath = os.path.join(modelsDirectory, modelName + '.json')
+    model_json = theModel.to_json()
+    with open(modelFilePath, 'w') as json_file:
+        json_file.write(model_json)
+
+
+def saveModel(theModel, modelName):
+    """
+    Save the model, in Keras [h5] format.
+    """
+    theModel.save(os.path.join(modelsDirectory, modelName))
+
+
+def saveModelWeights(theModel, modelName):
+    """
+    Saved the Model Weights
+    Args:
+        weights: The Weights
+        weightName: Weight Names
+
+    Returns:
+
+    """
+    weightsFilePath = os.path.join(weightsDirectory, modelName + '.h5')
+    theModel.save_weights(weightsFilePath)
+
+
+def buildModel(numOfNodes=48, numOfLayers=1):
+    """
+    Builds the basic model.
+    Returns:
+        A Keras NN Model
+
+    """
+    # input image dimensions
+    img_rows, img_cols = 480, 640
+    input_shape = (img_rows, img_cols, 1)
+    num_classes = 4
+
+    print("Building Model with ", numOfNodes, " nodes and ", numOfLayers, " layers.")
+
+    theModel = Sequential()
+
+    theModel.add(
+        Conv2D(5,
+               kernel_size=(5, 5),
+               strides=3,
+               activation='relu',
+               input_shape=input_shape
+               )
+    )
+    theModel.add(
+        MaxPooling2D(
+            pool_size=(2, 2)
+        )
+    )
+
+    theModel.add(
+        Conv2D(
+            10,
+            kernel_size=(3, 3),
+            strides=2,
+            activation='relu')
+    )
+    theModel.add(
+        MaxPooling2D(
+            pool_size=(2, 2),
+            strides=2
+        )
+    )
+
+    theModel.add(Flatten())
+
+    for index in range(numOfLayers):
+        theModel.add(Dense(numOfNodes))
+        theModel.add(BatchNormalization())
+        theModel.add(Activation('relu'))
+        theModel.add(Dropout(0.25))
+
+    theModel.add(Dense(num_classes, activation='softmax'))
+
+    theModel.compile(
+        loss=keras.losses.categorical_crossentropy,
+        optimizer=keras.optimizers.Adam(),
+        metrics=['categorical_accuracy']
+    )
+
+    theModel.summary()
+
+    return theModel
+
+
+def trainModel(trainingName, theModel, x_train, y_train, x_test, y_test, num_classes=4, numOfEpochs=24):
+    """
+    Trains the model via given data.
+
+    Args:
+        trainingName: A name of this train [mainly to track in TensorBoard
+        x_train: The X Set for Trainings
+        y_train: The Y set for Testing
+        x_test:  The X Set for Training/Verification
+        y_test:  The Y Set for Testing/Verification
+
+    Returns:
+
+    """
+    img_rows, img_cols = 480, 640
+
+    # Reshape the X sets.
+    # Mainly for this project.because Keras/Tensor thinks in Channels.
+    # And since we are using Greyscale data, we really don't have a channel.
+    # So we have to 'fake' a channel
+    #
+    x_train = x_train.reshape(x_train.shape[0], img_rows, img_cols, 1)
+    x_test = x_test.reshape(x_test.shape[0], img_rows, img_cols, 1)
+
+    # Convert class vectors to binary class matrices
+    y_train_as_category = to_categorical(y_train, num_classes)
+    y_test_as_category = to_categorical(y_test, num_classes)
+
+    logFilePath = os.path.join(tensorLogDataDir, trainingName)
+
+    TBoardCallback = keras.callbacks.TensorBoard(
+        log_dir=logFilePath,
+        histogram_freq=0,
+        write_graph=True,
+        write_images=True
+    )
+
+    theModel.fit(x_train,
+                 y_train_as_category,
+                 batch_size=16,
+                 epochs=numOfEpochs,
+                 verbose=1,
+                 validation_data=(x_test, y_test_as_category),
+                 callbacks=[TBoardCallback]
+                 )
+
+    return theModel
+
+
+def evaluateModel(theModel, x_test, y_test, num_classes):
+    """
+    Evaluated the Model.
+
+    Parameters:
+        theModel:
+        x_test:
+        y_test:
+        num_classes:
+
+    Return:
+
+    """
+    img_rows, img_cols = 480, 640
+
+    x_test = x_test.reshape(x_test.shape[0], img_rows, img_cols, 1)
+    y_test_as_category = to_categorical(y_test, num_classes)
+
+    score = theModel.evaluate(x_test, y_test_as_category, verbose=0)
+    print('General > Test loss: ', score[0], 'Test accuracy: ', score[1])
+
+    predictionResults = theModel.predict_classes(x_test, verbose=1)
+
+    scoringList = [0, 0, 0, 0]
+    scoringListAsPecents = []
+
+    for index in range(len(x_test)):
+        if (predictionResults[index] == y_test[index]):
+            #             print( index, 'Results: ', predictionResults[index], " VS ", y_test[index], "Match" )
+            scoringList[int(y_test[index])] = scoringList[int(y_test[index])] + 1
+    #         else:
+    #             print( index, 'Results: ', predictionResults[index], " VS ", y_test[index], "No Match" )
+
+    for element in scoringList:
+        scoringListAsPecents.append(element / 10.0)
+
+    #     print( scoringList )
+
+    return {'SCORE': score, 'SCORELIST': scoringListAsPecents}
+
+
+
+
+
+
 
 
 class NNExploration():
@@ -283,70 +519,7 @@ class NNExploration():
                   )
 
 
-def loadModel( modelName ):
-    """
-    Loads the Model.
-    """
-    theModel = load_model( os.path.join( modelsDirectory, modelName) )
-    print('MODEL Loaded.')
-    return theModel
 
-
-def saveModelEverything(theModel, modelName):
-    """
-    Saved Everything in regards to the model.
-    """
-    saveModelStructure(theModel, modelName)
-    saveModel(theModel, modelName)
-    saveModelJSON(theModel, modelName)
-    saveModelWeights(theModel, modelName)
-
-    print("Model Everything Saved")
-
-
-def saveModelStructure(theModel, modelStructureName):
-    """
-    Saves an image of the Model Structure.
-    """
-    modelStructsFilePath = os.path.join(modelsStructsDirectory, modelStructureName)
-    plot_model(theModel, to_file=modelStructsFilePath)
-
-
-def saveModelJSON(model, modelName):
-    """
-    Saves the Model as JSON
-    Args:
-        model: the Keras NN Model
-        modelName: the Name
-
-    Returns:
-
-    """
-    modelFilePath = os.path.join(modelsDirectory, modelName + '.json')
-    model_json = theModel.to_json()
-    with open(modelFilePath, 'w') as json_file:
-        json_file.write(model_json)
-
-
-def saveModel(model, modelName):
-    """
-    Save the model, in Keras [h5] format.
-    """
-    theModel.save(os.path.join(modelsDirectory, modelName))
-
-
-def saveModelWeights(theModel, modelName):
-    """
-    Saved the Model Weights
-    Args:
-        weights: The Weights
-        weightName: Weight Names
-
-    Returns:
-
-    """
-    weightsFilePath = os.path.join(weightsDirectory, modelName + '.h5')
-    theModel.save_weights(weightsFilePath)
 
 
 def recordNNTestResults( somethingToWrite ):
@@ -370,6 +543,7 @@ def recordNNTestResults( somethingToWrite ):
 def testAllNNTypes():
     """
     A quick made function to figure out how many nodes and Layers we needed.
+    Basically a Grid Search
 
     Returns:
 
@@ -450,6 +624,7 @@ def testAllNNTypes():
 def testAllNNTypes2():
     """
     Another  quick made function to figure out how many nodes and Layers we needed.
+    Basically a Grid Search
 
     Returns:
 
@@ -530,6 +705,7 @@ def testAllNNTypes2():
 def testAllNNTypes3():
     """
     Another  quick made function to figure out how many nodes and Layers we needed.
+    Basically a Grid Search
 
     Returns:
 

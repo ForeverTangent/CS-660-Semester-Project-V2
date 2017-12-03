@@ -1,6 +1,8 @@
 # -*- coding: utf-8 -*-
 """
-Spyder Editor
+A bunch of functions collect to help create and manage the Training and Test data.
+
+A little hacky but it should be stable.
 
 """
 
@@ -867,10 +869,10 @@ def reportStats():
             HOLEs = HOLEs + 1
             
     print( "Number of Everything" )
-    print( "UPs: " + str(UPs) )
-    print( "DOWNs: " + str(DOWNs) )
-    print( "NAs: " + str(NAs) )
-    print( "HOLEs: " + str(HOLEs) )
+    print( "UPs: " + str(UPs * 2) )
+    print( "DOWNs: " + str(DOWNs * 2) )
+    print( "NAs: " + str(NAs * 2) )
+    print( "HOLEs: " + str(HOLEs * 2) )
     
     
 # def reshape( theTrainingSet ):

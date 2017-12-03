@@ -1,0 +1,18 @@
+import os
+import csv
+import numpy as np
+import matplotlib as plt
+
+resultsDirectory = os.path.join( os.getcwd(), os.pardir, 'RESULTS' )
+
+def generatePlotsInResults():
+	listFromDir = os.listdir( resultsDirectory )
+	print( listFromDir )
+
+
+if __name__ == "__main__":
+	"""
+	"""
+	generatePlotsInResults()
+
+	print("__main__ Done.")

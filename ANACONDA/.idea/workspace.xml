@@ -1,7 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="426d49aa-b003-4561-9ed1-3281143e61a6" name="Default" comment="" />
+    <list default="true" id="426d49aa-b003-4561-9ed1-3281143e61a6" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/CS-660-SP-Notebook-1-V2.ipynb" afterPath="$PROJECT_DIR$/CS-660-SP-Notebook-1-V2.ipynb" />
+      <change beforePath="$PROJECT_DIR$/CS660DataManagement.py" afterPath="$PROJECT_DIR$/CS660DataManagement.py" />
+      <change beforePath="$PROJECT_DIR$/HumanOracle.py" afterPath="$PROJECT_DIR$/HumanOracle.py" />
+      <change beforePath="$PROJECT_DIR$/NNExploration.py" afterPath="$PROJECT_DIR$/NNExploration.py" />
+      <change beforePath="$PROJECT_DIR$/../RESULTS/JUPYTER_ADDED_ELEMENTS_RECORD-2017-11-30-19-26-8.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../RESULTS/JUPYTER_ADDED_ELEMENTS_RECORD-2017-11-30-19-34-2.csv" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../RESULTS/JUPYTER_ADDED_ELEMENTS_RECORD-2017-11-30-20-10-50.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../RESULTS/JUPYTER_ADDED_ELEMENTS_RECORD-2017-11-30-20-21-54.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../RESULTS/JUPYTER_TRAIN_PREDICTION_RESULTS-2017-11-30-19-26-8.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../RESULTS/JUPYTER_TRAIN_PREDICTION_RESULTS-2017-11-30-19-34-2.csv" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../RESULTS/JUPYTER_TRAIN_PREDICTION_RESULTS-2017-11-30-20-10-50.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../RESULTS/JUPYTER_TRAIN_PREDICTION_RESULTS-2017-11-30-20-21-54.csv" afterPath="" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -12,30 +26,27 @@
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="CS660DataManagement.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/CS660DataManagement.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="668" column="49" lean-forward="false" selection-start-line="668" selection-start-column="49" selection-end-line="668" selection-end-column="49" />
+            <state relative-caret-position="51">
+              <caret line="4" column="39" lean-forward="false" selection-start-line="4" selection-start-column="39" selection-end-line="4" selection-end-column="39" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="NNExploration.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="NNExploration.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/NNExploration.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-168">
-              <caret line="349" column="0" lean-forward="true" selection-start-line="349" selection-start-column="0" selection-end-line="349" selection-end-column="0" />
+            <state relative-caret-position="225">
+              <caret line="15" column="69" lean-forward="false" selection-start-line="15" selection-start-column="69" selection-end-line="15" selection-end-column="69" />
               <folding>
-                <element signature="e#268#277#0" expanded="true" />
-                <element signature="e#2981#8265#0" expanded="false" />
-                <element signature="e#10373#13621#0" expanded="false" />
-                <element signature="e#13653#16891#0" expanded="false" />
-                <element signature="e#16923#20152#0" expanded="false" />
+                <element signature="e#555#564#0" expanded="true" />
+                <element signature="e#14865#18141#0" expanded="false" />
+                <element signature="e#18173#21439#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -44,10 +55,34 @@
       <file leaf-file-name="HumanOracle.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/HumanOracle.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="480">
-              <caret line="45" column="0" lean-forward="false" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
+            <state relative-caret-position="1125">
+              <caret line="75" column="0" lean-forward="false" selection-start-line="75" selection-start-column="0" selection-end-line="75" selection-end-column="79" />
               <folding>
-                <element signature="e#57#66#0" expanded="true" />
+                <element signature="e#104#113#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="sortResults.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sortResults.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="331">
+              <caret line="79" column="32" lean-forward="false" selection-start-line="79" selection-start-column="32" selection-end-line="79" selection-end-column="32" />
+              <folding>
+                <element signature="e#140#149#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="sortResultsElements.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/sortResultsElements.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="338">
+              <caret line="51" column="32" lean-forward="false" selection-start-line="51" selection-start-column="32" selection-end-line="51" selection-end-column="32" />
+              <folding>
+                <element signature="e#104#113#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -71,15 +106,30 @@
       <find>modelsStructsDirectory</find>
       <find>addNewSamplesToTrainingSet</find>
       <find>getASampleOfClass</find>
+      <find>Jupyter</find>
+      <find>JUPYTER</find>
+      <find>hO.</find>
+      <find>Set</find>
+      <find>recordElementsAddedToTrainingList</find>
+      <find>et</find>
+      <find>set</find>
+      <find>seed</find>
+      <find>rowHeader</find>
+      <find>headers</find>
     </findStrings>
     <replaceStrings>
       <replace>self.theModel</replace>
+      <replace>PyCHARM</replace>
+      <replace>List</replace>
+      <replace>elementsAddedToTrainingLISTFileName</replace>
+      <replace>elementsAddedToTrainingListFileName</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/sortResults.py" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/CS660DataManagement.py" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/HumanOracle.py" root0="SKIP_INSPECTION" />
   </component>
@@ -88,13 +138,15 @@
       <list>
         <option value="$PROJECT_DIR$/InteractiveNN.py" />
         <option value="$PROJECT_DIR$/humanOracle" />
-        <option value="$PROJECT_DIR$/CS660DataManagement.py" />
         <option value="$PROJECT_DIR$/HumanOracle.py" />
         <option value="$PROJECT_DIR$/NNExploration.py" />
+        <option value="$PROJECT_DIR$/CS660DataManagement.py" />
+        <option value="$PROJECT_DIR$/sortResults.py" />
+        <option value="$PROJECT_DIR$/sortResultsElements.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" fullScreen="true">
     <option name="width" value="1680" />
     <option name="height" value="1050" />
   </component>
@@ -134,26 +186,52 @@
       <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ANACONDA" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ANACONDA" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
+          <expand>
+            <path>
+              <item name="ANACONDA" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ANACONDA" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
         </subPane>
       </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="FullScreen" value="true" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyIntegratedToolsModulesConfigurable" />
   </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
   <component name="RunManager" selected="Python.HumanOracle">
-    <configuration default="false" name="InteractiveNN" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="HumanOracle" type="PythonConfigurationType" factoryName="Python">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="ANACONDA" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/HumanOracle.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="InteractiveNN" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -168,7 +246,8 @@
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/InteractiveNN.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
-      <method />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
     </configuration>
     <configuration default="true" type="PythonConfigurationType" factoryName="Python">
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -304,23 +383,6 @@
       <option name="USE_KEYWORD" value="false" />
       <method />
     </configuration>
-    <configuration default="false" name="HumanOracle" type="PythonConfigurationType" factoryName="Python">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="ANACONDA" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/HumanOracle.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <method />
-    </configuration>
     <list size="2">
       <item index="0" class="java.lang.String" itemvalue="Python.HumanOracle" />
       <item index="1" class="java.lang.String" itemvalue="Python.InteractiveNN" />
@@ -333,6 +395,9 @@
   </component>
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -351,30 +416,62 @@
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24954791" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32914045" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32914045" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32914045" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20675105" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29355034" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32914045" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <option name="time" value="1" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/CS660DataManagement.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="9900">
+          <caret line="668" column="49" lean-forward="false" selection-start-line="668" selection-start-column="49" selection-end-line="668" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HumanOracle.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="45" column="0" lean-forward="false" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
+          <folding>
+            <element signature="e#104#113#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NNExploration.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2865">
+          <caret line="531" column="22" lean-forward="false" selection-start-line="531" selection-start-column="22" selection-end-line="531" selection-end-column="22" />
+          <folding>
+            <element signature="e#555#564#0" expanded="true" />
+            <element signature="e#14865#18141#0" expanded="false" />
+            <element signature="e#18173#21439#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/CS660DataManagement.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2490">
@@ -388,11 +485,9 @@
         <state relative-caret-position="7650">
           <caret line="543" column="0" lean-forward="false" selection-start-line="543" selection-start-column="0" selection-end-line="555" selection-end-column="27" />
           <folding>
-            <element signature="e#268#277#0" expanded="true" />
-            <element signature="e#2981#8265#0" expanded="false" />
-            <element signature="e#10373#13621#0" expanded="false" />
-            <element signature="e#13653#16891#0" expanded="false" />
-            <element signature="e#16923#20152#0" expanded="false" />
+            <element signature="e#555#564#0" expanded="true" />
+            <element signature="e#14865#18141#0" expanded="false" />
+            <element signature="e#18173#21439#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -402,7 +497,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#57#66#0" expanded="true" />
+            <element signature="e#104#113#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -420,11 +515,9 @@
         <state relative-caret-position="555">
           <caret line="70" column="0" lean-forward="false" selection-start-line="70" selection-start-column="0" selection-end-line="71" selection-end-column="81" />
           <folding>
-            <element signature="e#268#277#0" expanded="true" />
-            <element signature="e#2981#8265#0" expanded="false" />
-            <element signature="e#10373#13621#0" expanded="false" />
-            <element signature="e#13653#16891#0" expanded="false" />
-            <element signature="e#16923#20152#0" expanded="false" />
+            <element signature="e#555#564#0" expanded="true" />
+            <element signature="e#14865#18141#0" expanded="false" />
+            <element signature="e#18173#21439#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -449,11 +542,9 @@
         <state relative-caret-position="2115">
           <caret line="174" column="0" lean-forward="false" selection-start-line="174" selection-start-column="0" selection-end-line="192" selection-end-column="20" />
           <folding>
-            <element signature="e#268#277#0" expanded="true" />
-            <element signature="e#2981#8265#0" expanded="false" />
-            <element signature="e#10373#13621#0" expanded="false" />
-            <element signature="e#13653#16891#0" expanded="false" />
-            <element signature="e#16923#20152#0" expanded="false" />
+            <element signature="e#555#564#0" expanded="true" />
+            <element signature="e#14865#18141#0" expanded="false" />
+            <element signature="e#18173#21439#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -472,34 +563,52 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/NNExploration.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="69" lean-forward="false" selection-start-line="15" selection-start-column="69" selection-end-line="15" selection-end-column="69" />
+          <folding>
+            <element signature="e#555#564#0" expanded="true" />
+            <element signature="e#14865#18141#0" expanded="false" />
+            <element signature="e#18173#21439#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/CS660DataManagement.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="668" column="49" lean-forward="false" selection-start-line="668" selection-start-column="49" selection-end-line="668" selection-end-column="49" />
+        <state relative-caret-position="51">
+          <caret line="4" column="39" lean-forward="false" selection-start-line="4" selection-start-column="39" selection-end-line="4" selection-end-column="39" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/HumanOracle.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="45" column="0" lean-forward="false" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
+        <state relative-caret-position="1125">
+          <caret line="75" column="0" lean-forward="false" selection-start-line="75" selection-start-column="0" selection-end-line="75" selection-end-column="79" />
           <folding>
-            <element signature="e#57#66#0" expanded="true" />
+            <element signature="e#104#113#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/NNExploration.py">
+    <entry file="file://$PROJECT_DIR$/sortResults.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-168">
-          <caret line="349" column="0" lean-forward="true" selection-start-line="349" selection-start-column="0" selection-end-line="349" selection-end-column="0" />
+        <state relative-caret-position="331">
+          <caret line="79" column="32" lean-forward="false" selection-start-line="79" selection-start-column="32" selection-end-line="79" selection-end-column="32" />
           <folding>
-            <element signature="e#268#277#0" expanded="true" />
-            <element signature="e#2981#8265#0" expanded="false" />
-            <element signature="e#10373#13621#0" expanded="false" />
-            <element signature="e#13653#16891#0" expanded="false" />
-            <element signature="e#16923#20152#0" expanded="false" />
+            <element signature="e#140#149#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sortResultsElements.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="338">
+          <caret line="51" column="32" lean-forward="false" selection-start-line="51" selection-start-column="32" selection-end-line="51" selection-end-column="32" />
+          <folding>
+            <element signature="e#104#113#0" expanded="true" />
           </folding>
         </state>
       </provider>
