@@ -232,7 +232,7 @@ def buildModel(numOfNodes=48, numOfLayers=1):
     return theModel
 
 
-def trainModel(trainingName, theModel, x_train, y_train, x_test, y_test, num_classes=4, numOfEpochs=24):
+def trainModel(trainingName: object, theModel: object, x_train: object, y_train: object, x_test: object, y_test: object, num_classes: object = 4, numOfEpochs: object = 24) -> object:
     """
     Trains the model via given data.
 
@@ -303,6 +303,8 @@ def evaluateModel(theModel, x_test, y_test, num_classes):
     print('General > Test loss: ', score[0], 'Test accuracy: ', score[1])
 
     predictionResults = theModel.predict_classes(x_test, verbose=1)
+
+    print("predictionResults: ", predictionResults)
 
     scoringList = [0, 0, 0, 0]
     scoringListAsPecents = []

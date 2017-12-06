@@ -346,6 +346,15 @@ def getDictOfClassLists():
     return { 'upList': upList, 'downList': downList, 'naList': naList, 'holeList' : holeList }
 
 
+def getAllSamples():
+
+    dictOfAllClasses = getDictOfClassLists()
+
+    allSamples = dictOfAllClasses['upList'] + dictOfAllClasses['downList'] + dictOfAllClasses['naList'] + dictOfAllClasses['holeList']
+
+    return allSamples
+
+
 def getDepthCSVFileAsNPArray( theCSVFile ):
     """
     Turn Depth CSV data File into as Numpy Array
@@ -941,3 +950,5 @@ if __name__ == "__main__":
     CS660DataManagementCheck()
     createAllBasicData()
     reportStats()
+    print( len( getAllSamples() ) )
+    print( getAllSamples()[0] )

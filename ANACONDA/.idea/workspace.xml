@@ -3,18 +3,183 @@
   <component name="ChangeListManager">
     <list default="true" id="426d49aa-b003-4561-9ed1-3281143e61a6" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/CS-660-SP-Notebook-1-V2.ipynb" afterPath="$PROJECT_DIR$/CS-660-SP-Notebook-1-V2.ipynb" />
       <change beforePath="$PROJECT_DIR$/CS660DataManagement.py" afterPath="$PROJECT_DIR$/CS660DataManagement.py" />
       <change beforePath="$PROJECT_DIR$/HumanOracle.py" afterPath="$PROJECT_DIR$/HumanOracle.py" />
       <change beforePath="$PROJECT_DIR$/NNExploration.py" afterPath="$PROJECT_DIR$/NNExploration.py" />
-      <change beforePath="$PROJECT_DIR$/../RESULTS/JUPYTER_ADDED_ELEMENTS_RECORD-2017-11-30-19-26-8.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../RESULTS/JUPYTER_ADDED_ELEMENTS_RECORD-2017-11-30-19-34-2.csv" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../RESULTS/JUPYTER_ADDED_ELEMENTS_RECORD-2017-11-30-20-10-50.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../RESULTS/JUPYTER_ADDED_ELEMENTS_RECORD-2017-11-30-20-21-54.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../RESULTS/JUPYTER_TRAIN_PREDICTION_RESULTS-2017-11-30-19-26-8.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../RESULTS/JUPYTER_TRAIN_PREDICTION_RESULTS-2017-11-30-19-34-2.csv" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../RESULTS/JUPYTER_TRAIN_PREDICTION_RESULTS-2017-11-30-20-10-50.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../RESULTS/JUPYTER_TRAIN_PREDICTION_RESULTS-2017-11-30-20-21-54.csv" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../RESULTS/COLLECTED RESULTS/COLLECTED_RESULTS_MAIN/ICOLOR_COLLECTED_RESULTS.xlsx" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../RESULTS/COLLECTED RESULTS/COLLECTED_RESULTS_MAIN/IDEPTH_COLLECTED_RESULTS.xlsx" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../RESULTS/COLLECTED RESULTS/COLLECTED_RESULTS_MAIN/PCLOUD_COLLECTED_RESULTS.xlsx" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../RESULTS/COLLECTED RESULTS/ICOLOR_DOWN_CollectedResults.csv" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../RESULTS/COLLECTED RESULTS/ICOLOR_HOLE_CollectedResults.csv" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../RESULTS/COLLECTED RESULTS/ICOLOR_NA_CollectedResults.csv" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../RESULTS/COLLECTED RESULTS/ICOLOR_TestAccuracy_CollectedResults.csv" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../RESULTS/COLLECTED RESULTS/ICOLOR_TestLoss_CollectedResults.csv" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../RESULTS/COLLECTED RESULTS/ICOLOR_UP_CollectedResults.csv" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../RESULTS/COLLECTED RESULTS/ICOLOR_elementAddedInAge.csv" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../RESULTS/COLLECTED RESULTS/IDEPTH_DOWN_CollectedResults.csv" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../RESULTS/COLLECTED RESULTS/IDEPTH_HOLE_CollectedResults.csv" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../RESULTS/COLLECTED RESULTS/IDEPTH_NA_CollectedResults.csv" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../RESULTS/COLLECTED RESULTS/IDEPTH_TestAccuracy_CollectedResults.csv" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../RESULTS/COLLECTED RESULTS/IDEPTH_TestLoss_CollectedResults.csv" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../RESULTS/COLLECTED RESULTS/IDEPTH_UP_CollectedResults.csv" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../RESULTS/COLLECTED RESULTS/IDEPTH_elementAddedInAge.csv" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../RESULTS/COLLECTED RESULTS/PCLOUD_DOWN_CollectedResults.csv" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../RESULTS/COLLECTED RESULTS/PCLOUD_HOLE_CollectedResults.csv" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../RESULTS/COLLECTED RESULTS/PCLOUD_NA_CollectedResults.csv" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../RESULTS/COLLECTED RESULTS/PCLOUD_TestAccuracy_CollectedResults.csv" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../RESULTS/COLLECTED RESULTS/PCLOUD_TestLoss_CollectedResults.csv" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../RESULTS/COLLECTED RESULTS/PCLOUD_UP_CollectedResults.csv" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../RESULTS/COLLECTED RESULTS/PCLOUD_elementAddedInAge.csv" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../RESULTS/PYCHARM_ADDED_ELEMENTS_RECORD_ICOLOR_DL_0_TL_0_AT_0.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../RESULTS/PYCHARM_ADDED_ELEMENTS_RECORD_ICOLOR_DL_0_TL_1_AT_0.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../RESULTS/PYCHARM_ADDED_ELEMENTS_RECORD_ICOLOR_DL_0_TL_2_AT_0.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../RESULTS/PYCHARM_ADDED_ELEMENTS_RECORD_ICOLOR_DL_0_TL_3_AT_0.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../RESULTS/PYCHARM_ADDED_ELEMENTS_RECORD_ICOLOR_DL_0_TL_4_AT_0.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../RESULTS/PYCHARM_ADDED_ELEMENTS_RECORD_ICOLOR_DL_1_TL_0_AT_0.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../RESULTS/PYCHARM_ADDED_ELEMENTS_RECORD_ICOLOR_DL_1_TL_1_AT_0.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../RESULTS/PYCHARM_ADDED_ELEMENTS_RECORD_ICOLOR_DL_1_TL_2_AT_0.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../RESULTS/PYCHARM_ADDED_ELEMENTS_RECORD_ICOLOR_DL_1_TL_3_AT_0.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../RESULTS/PYCHARM_ADDED_ELEMENTS_RECORD_ICOLOR_DL_1_TL_4_AT_0.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../RESULTS/PYCHARM_ADDED_ELEMENTS_RECORD_ICOLOR_DL_2_TL_0_AT_0.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../RESULTS/PYCHARM_ADDED_ELEMENTS_RECORD_ICOLOR_DL_2_TL_1_AT_0.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../RESULTS/PYCHARM_ADDED_ELEMENTS_RECORD_ICOLOR_DL_2_TL_2_AT_0.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../RESULTS/PYCHARM_ADDED_ELEMENTS_RECORD_ICOLOR_DL_2_TL_3_AT_0.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../RESULTS/PYCHARM_ADDED_ELEMENTS_RECORD_ICOLOR_DL_2_TL_4_AT_0.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../RESULTS/PYCHARM_ADDED_ELEMENTS_RECORD_ICOLOR_DL_3_TL_0_AT_0.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../RESULTS/PYCHARM_ADDED_ELEMENTS_RECORD_ICOLOR_DL_3_TL_1_AT_0.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../RESULTS/PYCHARM_ADDED_ELEMENTS_RECORD_ICOLOR_DL_3_TL_2_AT_0.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../RESULTS/PYCHARM_ADDED_ELEMENTS_RECORD_ICOLOR_DL_3_TL_3_AT_0.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../RESULTS/PYCHARM_ADDED_ELEMENTS_RECORD_ICOLOR_DL_3_TL_4_AT_0.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../RESULTS/PYCHARM_ADDED_ELEMENTS_RECORD_ICOLOR_DL_4_TL_0_AT_0.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../RESULTS/PYCHARM_ADDED_ELEMENTS_RECORD_ICOLOR_DL_4_TL_1_AT_0.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../RESULTS/PYCHARM_ADDED_ELEMENTS_RECORD_ICOLOR_DL_4_TL_2_AT_0.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../RESULTS/PYCHARM_ADDED_ELEMENTS_RECORD_ICOLOR_DL_4_TL_3_AT_0.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../RESULTS/PYCHARM_ADDED_ELEMENTS_RECORD_ICOLOR_DL_4_TL_4_AT_0.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../RESULTS/PYCHARM_ADDED_ELEMENTS_RECORD_IDEPTH_DL_0_TL_0_AT_0.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../RESULTS/PYCHARM_ADDED_ELEMENTS_RECORD_IDEPTH_DL_0_TL_1_AT_0.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../RESULTS/PYCHARM_ADDED_ELEMENTS_RECORD_IDEPTH_DL_0_TL_2_AT_0.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../RESULTS/PYCHARM_ADDED_ELEMENTS_RECORD_IDEPTH_DL_0_TL_3_AT_0.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../RESULTS/PYCHARM_ADDED_ELEMENTS_RECORD_IDEPTH_DL_0_TL_4_AT_0.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../RESULTS/PYCHARM_ADDED_ELEMENTS_RECORD_IDEPTH_DL_1_TL_0_AT_0.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../RESULTS/PYCHARM_ADDED_ELEMENTS_RECORD_IDEPTH_DL_1_TL_1_AT_0.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../RESULTS/PYCHARM_ADDED_ELEMENTS_RECORD_IDEPTH_DL_1_TL_2_AT_0.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../RESULTS/PYCHARM_ADDED_ELEMENTS_RECORD_IDEPTH_DL_1_TL_3_AT_0.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../RESULTS/PYCHARM_ADDED_ELEMENTS_RECORD_IDEPTH_DL_1_TL_4_AT_0.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../RESULTS/PYCHARM_ADDED_ELEMENTS_RECORD_IDEPTH_DL_2_TL_0_AT_0.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../RESULTS/PYCHARM_ADDED_ELEMENTS_RECORD_IDEPTH_DL_2_TL_1_AT_0.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../RESULTS/PYCHARM_ADDED_ELEMENTS_RECORD_IDEPTH_DL_2_TL_2_AT_0.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../RESULTS/PYCHARM_ADDED_ELEMENTS_RECORD_IDEPTH_DL_2_TL_3_AT_0.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../RESULTS/PYCHARM_ADDED_ELEMENTS_RECORD_IDEPTH_DL_2_TL_4_AT_0.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../RESULTS/PYCHARM_ADDED_ELEMENTS_RECORD_IDEPTH_DL_3_TL_0_AT_0.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../RESULTS/PYCHARM_ADDED_ELEMENTS_RECORD_IDEPTH_DL_3_TL_1_AT_0.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../RESULTS/PYCHARM_ADDED_ELEMENTS_RECORD_IDEPTH_DL_3_TL_2_AT_0.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../RESULTS/PYCHARM_ADDED_ELEMENTS_RECORD_IDEPTH_DL_3_TL_3_AT_0.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../RESULTS/PYCHARM_ADDED_ELEMENTS_RECORD_IDEPTH_DL_3_TL_4_AT_0.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../RESULTS/PYCHARM_ADDED_ELEMENTS_RECORD_IDEPTH_DL_4_TL_0_AT_0.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../RESULTS/PYCHARM_ADDED_ELEMENTS_RECORD_IDEPTH_DL_4_TL_1_AT_0.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../RESULTS/PYCHARM_ADDED_ELEMENTS_RECORD_IDEPTH_DL_4_TL_2_AT_0.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../RESULTS/PYCHARM_ADDED_ELEMENTS_RECORD_IDEPTH_DL_4_TL_3_AT_0.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../RESULTS/PYCHARM_ADDED_ELEMENTS_RECORD_IDEPTH_DL_4_TL_4_AT_0.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../RESULTS/PYCHARM_ADDED_ELEMENTS_RECORD_PCLOUD_DL_0_TL_0_AT_0.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../RESULTS/PYCHARM_ADDED_ELEMENTS_RECORD_PCLOUD_DL_0_TL_1_AT_0.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../RESULTS/PYCHARM_ADDED_ELEMENTS_RECORD_PCLOUD_DL_0_TL_2_AT_0.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../RESULTS/PYCHARM_ADDED_ELEMENTS_RECORD_PCLOUD_DL_0_TL_3_AT_0.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../RESULTS/PYCHARM_ADDED_ELEMENTS_RECORD_PCLOUD_DL_0_TL_4_AT_0.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../RESULTS/PYCHARM_ADDED_ELEMENTS_RECORD_PCLOUD_DL_1_TL_0_AT_0.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../RESULTS/PYCHARM_ADDED_ELEMENTS_RECORD_PCLOUD_DL_1_TL_1_AT_0.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../RESULTS/PYCHARM_ADDED_ELEMENTS_RECORD_PCLOUD_DL_1_TL_2_AT_0.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../RESULTS/PYCHARM_ADDED_ELEMENTS_RECORD_PCLOUD_DL_1_TL_3_AT_0.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../RESULTS/PYCHARM_ADDED_ELEMENTS_RECORD_PCLOUD_DL_1_TL_4_AT_0.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../RESULTS/PYCHARM_ADDED_ELEMENTS_RECORD_PCLOUD_DL_2_TL_0_AT_0.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../RESULTS/PYCHARM_ADDED_ELEMENTS_RECORD_PCLOUD_DL_2_TL_1_AT_0.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../RESULTS/PYCHARM_ADDED_ELEMENTS_RECORD_PCLOUD_DL_2_TL_2_AT_0.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../RESULTS/PYCHARM_ADDED_ELEMENTS_RECORD_PCLOUD_DL_2_TL_3_AT_0.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../RESULTS/PYCHARM_ADDED_ELEMENTS_RECORD_PCLOUD_DL_2_TL_4_AT_0.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../RESULTS/PYCHARM_ADDED_ELEMENTS_RECORD_PCLOUD_DL_3_TL_0_AT_0.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../RESULTS/PYCHARM_ADDED_ELEMENTS_RECORD_PCLOUD_DL_3_TL_1_AT_0.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../RESULTS/PYCHARM_ADDED_ELEMENTS_RECORD_PCLOUD_DL_3_TL_2_AT_0.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../RESULTS/PYCHARM_ADDED_ELEMENTS_RECORD_PCLOUD_DL_3_TL_3_AT_0.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../RESULTS/PYCHARM_ADDED_ELEMENTS_RECORD_PCLOUD_DL_3_TL_4_AT_0.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../RESULTS/PYCHARM_ADDED_ELEMENTS_RECORD_PCLOUD_DL_4_TL_0_AT_0.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../RESULTS/PYCHARM_ADDED_ELEMENTS_RECORD_PCLOUD_DL_4_TL_1_AT_0.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../RESULTS/PYCHARM_ADDED_ELEMENTS_RECORD_PCLOUD_DL_4_TL_2_AT_0.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../RESULTS/PYCHARM_ADDED_ELEMENTS_RECORD_PCLOUD_DL_4_TL_3_AT_0.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../RESULTS/PYCHARM_ADDED_ELEMENTS_RECORD_PCLOUD_DL_4_TL_4_AT_0.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../RESULTS/PyCHARM_TRAIN_PREDICTION_RESULTS_ICOLOR_DL_0_TL_0_AT_0.txt" afterPath="$PROJECT_DIR$/../RESULTS/PyCHARM_TRAIN_PREDICTION_RESULTS_ICOLOR_DL_0_TL_0_AT_0.txt" />
+      <change beforePath="$PROJECT_DIR$/../RESULTS/PyCHARM_TRAIN_PREDICTION_RESULTS_ICOLOR_DL_0_TL_1_AT_0.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../RESULTS/PyCHARM_TRAIN_PREDICTION_RESULTS_ICOLOR_DL_0_TL_2_AT_0.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../RESULTS/PyCHARM_TRAIN_PREDICTION_RESULTS_ICOLOR_DL_0_TL_3_AT_0.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../RESULTS/PyCHARM_TRAIN_PREDICTION_RESULTS_ICOLOR_DL_0_TL_4_AT_0.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../RESULTS/PyCHARM_TRAIN_PREDICTION_RESULTS_ICOLOR_DL_1_TL_0_AT_0.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../RESULTS/PyCHARM_TRAIN_PREDICTION_RESULTS_ICOLOR_DL_1_TL_1_AT_0.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../RESULTS/PyCHARM_TRAIN_PREDICTION_RESULTS_ICOLOR_DL_1_TL_2_AT_0.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../RESULTS/PyCHARM_TRAIN_PREDICTION_RESULTS_ICOLOR_DL_1_TL_3_AT_0.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../RESULTS/PyCHARM_TRAIN_PREDICTION_RESULTS_ICOLOR_DL_1_TL_4_AT_0.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../RESULTS/PyCHARM_TRAIN_PREDICTION_RESULTS_ICOLOR_DL_2_TL_0_AT_0.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../RESULTS/PyCHARM_TRAIN_PREDICTION_RESULTS_ICOLOR_DL_2_TL_1_AT_0.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../RESULTS/PyCHARM_TRAIN_PREDICTION_RESULTS_ICOLOR_DL_2_TL_2_AT_0.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../RESULTS/PyCHARM_TRAIN_PREDICTION_RESULTS_ICOLOR_DL_2_TL_3_AT_0.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../RESULTS/PyCHARM_TRAIN_PREDICTION_RESULTS_ICOLOR_DL_2_TL_4_AT_0.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../RESULTS/PyCHARM_TRAIN_PREDICTION_RESULTS_ICOLOR_DL_3_TL_0_AT_0.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../RESULTS/PyCHARM_TRAIN_PREDICTION_RESULTS_ICOLOR_DL_3_TL_1_AT_0.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../RESULTS/PyCHARM_TRAIN_PREDICTION_RESULTS_ICOLOR_DL_3_TL_2_AT_0.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../RESULTS/PyCHARM_TRAIN_PREDICTION_RESULTS_ICOLOR_DL_3_TL_3_AT_0.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../RESULTS/PyCHARM_TRAIN_PREDICTION_RESULTS_ICOLOR_DL_3_TL_4_AT_0.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../RESULTS/PyCHARM_TRAIN_PREDICTION_RESULTS_ICOLOR_DL_4_TL_0_AT_0.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../RESULTS/PyCHARM_TRAIN_PREDICTION_RESULTS_ICOLOR_DL_4_TL_1_AT_0.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../RESULTS/PyCHARM_TRAIN_PREDICTION_RESULTS_ICOLOR_DL_4_TL_2_AT_0.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../RESULTS/PyCHARM_TRAIN_PREDICTION_RESULTS_ICOLOR_DL_4_TL_3_AT_0.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../RESULTS/PyCHARM_TRAIN_PREDICTION_RESULTS_ICOLOR_DL_4_TL_4_AT_0.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../RESULTS/PyCHARM_TRAIN_PREDICTION_RESULTS_IDEPTH_DL_0_TL_0_AT_0.txt" afterPath="$PROJECT_DIR$/../RESULTS/PyCHARM_TRAIN_PREDICTION_RESULTS_IDEPTH_DL_0_TL_0_AT_0.txt" />
+      <change beforePath="$PROJECT_DIR$/../RESULTS/PyCHARM_TRAIN_PREDICTION_RESULTS_IDEPTH_DL_0_TL_1_AT_0.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../RESULTS/PyCHARM_TRAIN_PREDICTION_RESULTS_IDEPTH_DL_0_TL_2_AT_0.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../RESULTS/PyCHARM_TRAIN_PREDICTION_RESULTS_IDEPTH_DL_0_TL_3_AT_0.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../RESULTS/PyCHARM_TRAIN_PREDICTION_RESULTS_IDEPTH_DL_0_TL_4_AT_0.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../RESULTS/PyCHARM_TRAIN_PREDICTION_RESULTS_IDEPTH_DL_1_TL_0_AT_0.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../RESULTS/PyCHARM_TRAIN_PREDICTION_RESULTS_IDEPTH_DL_1_TL_1_AT_0.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../RESULTS/PyCHARM_TRAIN_PREDICTION_RESULTS_IDEPTH_DL_1_TL_2_AT_0.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../RESULTS/PyCHARM_TRAIN_PREDICTION_RESULTS_IDEPTH_DL_1_TL_3_AT_0.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../RESULTS/PyCHARM_TRAIN_PREDICTION_RESULTS_IDEPTH_DL_1_TL_4_AT_0.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../RESULTS/PyCHARM_TRAIN_PREDICTION_RESULTS_IDEPTH_DL_2_TL_0_AT_0.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../RESULTS/PyCHARM_TRAIN_PREDICTION_RESULTS_IDEPTH_DL_2_TL_1_AT_0.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../RESULTS/PyCHARM_TRAIN_PREDICTION_RESULTS_IDEPTH_DL_2_TL_2_AT_0.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../RESULTS/PyCHARM_TRAIN_PREDICTION_RESULTS_IDEPTH_DL_2_TL_3_AT_0.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../RESULTS/PyCHARM_TRAIN_PREDICTION_RESULTS_IDEPTH_DL_2_TL_4_AT_0.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../RESULTS/PyCHARM_TRAIN_PREDICTION_RESULTS_IDEPTH_DL_3_TL_0_AT_0.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../RESULTS/PyCHARM_TRAIN_PREDICTION_RESULTS_IDEPTH_DL_3_TL_1_AT_0.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../RESULTS/PyCHARM_TRAIN_PREDICTION_RESULTS_IDEPTH_DL_3_TL_2_AT_0.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../RESULTS/PyCHARM_TRAIN_PREDICTION_RESULTS_IDEPTH_DL_3_TL_3_AT_0.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../RESULTS/PyCHARM_TRAIN_PREDICTION_RESULTS_IDEPTH_DL_3_TL_4_AT_0.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../RESULTS/PyCHARM_TRAIN_PREDICTION_RESULTS_IDEPTH_DL_4_TL_0_AT_0.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../RESULTS/PyCHARM_TRAIN_PREDICTION_RESULTS_IDEPTH_DL_4_TL_1_AT_0.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../RESULTS/PyCHARM_TRAIN_PREDICTION_RESULTS_IDEPTH_DL_4_TL_2_AT_0.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../RESULTS/PyCHARM_TRAIN_PREDICTION_RESULTS_IDEPTH_DL_4_TL_3_AT_0.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../RESULTS/PyCHARM_TRAIN_PREDICTION_RESULTS_IDEPTH_DL_4_TL_4_AT_0.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../RESULTS/PyCHARM_TRAIN_PREDICTION_RESULTS_PCLOUD_DL_0_TL_0_AT_0.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../RESULTS/PyCHARM_TRAIN_PREDICTION_RESULTS_PCLOUD_DL_0_TL_1_AT_0.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../RESULTS/PyCHARM_TRAIN_PREDICTION_RESULTS_PCLOUD_DL_0_TL_2_AT_0.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../RESULTS/PyCHARM_TRAIN_PREDICTION_RESULTS_PCLOUD_DL_0_TL_3_AT_0.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../RESULTS/PyCHARM_TRAIN_PREDICTION_RESULTS_PCLOUD_DL_0_TL_4_AT_0.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../RESULTS/PyCHARM_TRAIN_PREDICTION_RESULTS_PCLOUD_DL_1_TL_0_AT_0.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../RESULTS/PyCHARM_TRAIN_PREDICTION_RESULTS_PCLOUD_DL_1_TL_1_AT_0.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../RESULTS/PyCHARM_TRAIN_PREDICTION_RESULTS_PCLOUD_DL_1_TL_2_AT_0.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../RESULTS/PyCHARM_TRAIN_PREDICTION_RESULTS_PCLOUD_DL_1_TL_3_AT_0.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../RESULTS/PyCHARM_TRAIN_PREDICTION_RESULTS_PCLOUD_DL_1_TL_4_AT_0.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../RESULTS/PyCHARM_TRAIN_PREDICTION_RESULTS_PCLOUD_DL_2_TL_0_AT_0.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../RESULTS/PyCHARM_TRAIN_PREDICTION_RESULTS_PCLOUD_DL_2_TL_1_AT_0.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../RESULTS/PyCHARM_TRAIN_PREDICTION_RESULTS_PCLOUD_DL_2_TL_2_AT_0.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../RESULTS/PyCHARM_TRAIN_PREDICTION_RESULTS_PCLOUD_DL_2_TL_3_AT_0.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../RESULTS/PyCHARM_TRAIN_PREDICTION_RESULTS_PCLOUD_DL_2_TL_4_AT_0.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../RESULTS/PyCHARM_TRAIN_PREDICTION_RESULTS_PCLOUD_DL_3_TL_0_AT_0.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../RESULTS/PyCHARM_TRAIN_PREDICTION_RESULTS_PCLOUD_DL_3_TL_1_AT_0.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../RESULTS/PyCHARM_TRAIN_PREDICTION_RESULTS_PCLOUD_DL_3_TL_2_AT_0.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../RESULTS/PyCHARM_TRAIN_PREDICTION_RESULTS_PCLOUD_DL_3_TL_3_AT_0.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../RESULTS/PyCHARM_TRAIN_PREDICTION_RESULTS_PCLOUD_DL_3_TL_4_AT_0.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../RESULTS/PyCHARM_TRAIN_PREDICTION_RESULTS_PCLOUD_DL_4_TL_0_AT_0.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../RESULTS/PyCHARM_TRAIN_PREDICTION_RESULTS_PCLOUD_DL_4_TL_1_AT_0.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../RESULTS/PyCHARM_TRAIN_PREDICTION_RESULTS_PCLOUD_DL_4_TL_2_AT_0.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../RESULTS/PyCHARM_TRAIN_PREDICTION_RESULTS_PCLOUD_DL_4_TL_3_AT_0.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../RESULTS/PyCHARM_TRAIN_PREDICTION_RESULTS_PCLOUD_DL_4_TL_4_AT_0.txt" afterPath="" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -31,8 +196,8 @@
       <file leaf-file-name="CS660DataManagement.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/CS660DataManagement.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="4" column="39" lean-forward="false" selection-start-line="4" selection-start-column="39" selection-end-line="4" selection-end-column="39" />
+            <state relative-caret-position="197">
+              <caret line="144" column="4" lean-forward="false" selection-start-line="144" selection-start-column="4" selection-end-line="144" selection-end-column="4" />
               <folding />
             </state>
           </provider>
@@ -41,22 +206,22 @@
       <file leaf-file-name="NNExploration.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/NNExploration.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="15" column="69" lean-forward="false" selection-start-line="15" selection-start-column="69" selection-end-line="15" selection-end-column="69" />
+            <state relative-caret-position="184">
+              <caret line="234" column="146" lean-forward="false" selection-start-line="234" selection-start-column="146" selection-end-line="234" selection-end-column="170" />
               <folding>
                 <element signature="e#555#564#0" expanded="true" />
-                <element signature="e#14865#18141#0" expanded="false" />
-                <element signature="e#18173#21439#0" expanded="false" />
+                <element signature="e#14996#18272#0" expanded="false" />
+                <element signature="e#18304#21570#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="HumanOracle.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="HumanOracle.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/HumanOracle.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1125">
-              <caret line="75" column="0" lean-forward="false" selection-start-line="75" selection-start-column="0" selection-end-line="75" selection-end-column="79" />
+            <state relative-caret-position="439">
+              <caret line="597" column="97" lean-forward="false" selection-start-line="597" selection-start-column="97" selection-end-line="597" selection-end-column="97" />
               <folding>
                 <element signature="e#104#113#0" expanded="true" />
               </folding>
@@ -67,7 +232,7 @@
       <file leaf-file-name="sortResults.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sortResults.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="331">
+            <state relative-caret-position="1170">
               <caret line="79" column="32" lean-forward="false" selection-start-line="79" selection-start-column="32" selection-end-line="79" selection-end-column="32" />
               <folding>
                 <element signature="e#140#149#0" expanded="true" />
@@ -76,11 +241,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="sortResultsElements.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="sortResultsElements.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sortResultsElements.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="338">
-              <caret line="51" column="32" lean-forward="false" selection-start-line="51" selection-start-column="32" selection-end-line="51" selection-end-column="32" />
+            <state relative-caret-position="90">
+              <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="8" selection-end-column="76" />
               <folding>
                 <element signature="e#104#113#0" expanded="true" />
               </folding>
@@ -116,6 +281,12 @@
       <find>seed</find>
       <find>rowHeader</find>
       <find>headers</find>
+      <find>createNPArraysFor</find>
+      <find>lowestScoringClassName</find>
+      <find>attempt</find>
+      <find>Starting Human Oracle</find>
+      <find>onTrainingListIndex</find>
+      <find>reshape</find>
     </findStrings>
     <replaceStrings>
       <replace>self.theModel</replace>
@@ -138,11 +309,11 @@
       <list>
         <option value="$PROJECT_DIR$/InteractiveNN.py" />
         <option value="$PROJECT_DIR$/humanOracle" />
-        <option value="$PROJECT_DIR$/HumanOracle.py" />
-        <option value="$PROJECT_DIR$/NNExploration.py" />
-        <option value="$PROJECT_DIR$/CS660DataManagement.py" />
         <option value="$PROJECT_DIR$/sortResults.py" />
         <option value="$PROJECT_DIR$/sortResultsElements.py" />
+        <option value="$PROJECT_DIR$/CS660DataManagement.py" />
+        <option value="$PROJECT_DIR$/NNExploration.py" />
+        <option value="$PROJECT_DIR$/HumanOracle.py" />
       </list>
     </option>
   </component>
@@ -213,6 +384,24 @@
     </option>
   </component>
   <component name="RunManager" selected="Python.HumanOracle">
+    <configuration name="DataManagement" type="PythonConfigurationType" factoryName="Python">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="ANACONDA" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/CS660DataManagement.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
     <configuration name="HumanOracle" type="PythonConfigurationType" factoryName="Python">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -383,9 +572,10 @@
       <option name="USE_KEYWORD" value="false" />
       <method />
     </configuration>
-    <list size="2">
+    <list size="3">
       <item index="0" class="java.lang.String" itemvalue="Python.HumanOracle" />
-      <item index="1" class="java.lang.String" itemvalue="Python.InteractiveNN" />
+      <item index="1" class="java.lang.String" itemvalue="Python.DataManagement" />
+      <item index="2" class="java.lang.String" itemvalue="Python.InteractiveNN" />
     </list>
     <recent_temporary>
       <list size="1">
@@ -409,12 +599,21 @@
     </task>
     <servers />
   </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24954791" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32914045" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32914045" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -422,7 +621,7 @@
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29355034" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.48532495" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -437,11 +636,118 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="1" />
+      <default-breakpoints>
+        <breakpoint type="python-exception">
+          <properties notifyOnTerminate="true" exception="BaseException">
+            <option name="notifyOnTerminate" value="true" />
+          </properties>
+        </breakpoint>
+      </default-breakpoints>
+      <option name="time" value="11" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/CS660DataManagement.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="13260">
+          <caret line="892" column="35" lean-forward="false" selection-start-line="892" selection-start-column="28" selection-end-line="892" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NNExploration.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3585">
+          <caret line="272" column="37" lean-forward="true" selection-start-line="272" selection-start-column="37" selection-end-line="272" selection-end-column="37" />
+          <folding>
+            <element signature="e#555#564#0" expanded="true" />
+            <element signature="e#14996#18272#0" expanded="false" />
+            <element signature="e#18304#21570#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sortResults.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1170">
+          <caret line="79" column="32" lean-forward="false" selection-start-line="79" selection-start-column="32" selection-end-line="79" selection-end-column="32" />
+          <folding>
+            <element signature="e#140#149#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sortResultsElements.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="8" selection-end-column="76" />
+          <folding>
+            <element signature="e#104#113#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HumanOracle.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6150">
+          <caret line="410" column="87" lean-forward="false" selection-start-line="410" selection-start-column="87" selection-end-line="410" selection-end-column="87" />
+          <folding>
+            <element signature="e#104#113#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CS660DataManagement.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="39" lean-forward="false" selection-start-line="4" selection-start-column="39" selection-end-line="4" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NNExploration.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="69" lean-forward="false" selection-start-line="15" selection-start-column="69" selection-end-line="15" selection-end-column="69" />
+          <folding>
+            <element signature="e#555#564#0" expanded="true" />
+            <element signature="e#14996#18272#0" expanded="false" />
+            <element signature="e#18304#21570#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sortResults.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1170">
+          <caret line="79" column="32" lean-forward="false" selection-start-line="79" selection-start-column="32" selection-end-line="79" selection-end-column="32" />
+          <folding>
+            <element signature="e#140#149#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HumanOracle.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="660">
+          <caret line="75" column="0" lean-forward="false" selection-start-line="75" selection-start-column="0" selection-end-line="75" selection-end-column="79" />
+          <folding>
+            <element signature="e#104#113#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sortResultsElements.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="750">
+          <caret line="51" column="32" lean-forward="false" selection-start-line="51" selection-start-column="32" selection-end-line="51" selection-end-column="32" />
+          <folding>
+            <element signature="e#104#113#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/CS660DataManagement.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="9900">
@@ -466,8 +772,8 @@
           <caret line="531" column="22" lean-forward="false" selection-start-line="531" selection-start-column="22" selection-end-line="531" selection-end-column="22" />
           <folding>
             <element signature="e#555#564#0" expanded="true" />
-            <element signature="e#14865#18141#0" expanded="false" />
-            <element signature="e#18173#21439#0" expanded="false" />
+            <element signature="e#14996#18272#0" expanded="false" />
+            <element signature="e#18304#21570#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -486,8 +792,8 @@
           <caret line="543" column="0" lean-forward="false" selection-start-line="543" selection-start-column="0" selection-end-line="555" selection-end-column="27" />
           <folding>
             <element signature="e#555#564#0" expanded="true" />
-            <element signature="e#14865#18141#0" expanded="false" />
-            <element signature="e#18173#21439#0" expanded="false" />
+            <element signature="e#14996#18272#0" expanded="false" />
+            <element signature="e#18304#21570#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -516,8 +822,8 @@
           <caret line="70" column="0" lean-forward="false" selection-start-line="70" selection-start-column="0" selection-end-line="71" selection-end-column="81" />
           <folding>
             <element signature="e#555#564#0" expanded="true" />
-            <element signature="e#14865#18141#0" expanded="false" />
-            <element signature="e#18173#21439#0" expanded="false" />
+            <element signature="e#14996#18272#0" expanded="false" />
+            <element signature="e#18304#21570#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -543,8 +849,8 @@
           <caret line="174" column="0" lean-forward="false" selection-start-line="174" selection-start-column="0" selection-end-line="192" selection-end-column="20" />
           <folding>
             <element signature="e#555#564#0" expanded="true" />
-            <element signature="e#14865#18141#0" expanded="false" />
-            <element signature="e#18173#21439#0" expanded="false" />
+            <element signature="e#14996#18272#0" expanded="false" />
+            <element signature="e#18304#21570#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -563,39 +869,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/NNExploration.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="69" lean-forward="false" selection-start-line="15" selection-start-column="69" selection-end-line="15" selection-end-column="69" />
-          <folding>
-            <element signature="e#555#564#0" expanded="true" />
-            <element signature="e#14865#18141#0" expanded="false" />
-            <element signature="e#18173#21439#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CS660DataManagement.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="4" column="39" lean-forward="false" selection-start-line="4" selection-start-column="39" selection-end-line="4" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HumanOracle.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1125">
-          <caret line="75" column="0" lean-forward="false" selection-start-line="75" selection-start-column="0" selection-end-line="75" selection-end-column="79" />
-          <folding>
-            <element signature="e#104#113#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sortResults.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="331">
+        <state relative-caret-position="1170">
           <caret line="79" column="32" lean-forward="false" selection-start-line="79" selection-start-column="32" selection-end-line="79" selection-end-column="32" />
           <folding>
             <element signature="e#140#149#0" expanded="true" />
@@ -605,8 +881,46 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/sortResultsElements.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="338">
-          <caret line="51" column="32" lean-forward="false" selection-start-line="51" selection-start-column="32" selection-end-line="51" selection-end-column="32" />
+        <state relative-caret-position="90">
+          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="8" selection-end-column="76" />
+          <folding>
+            <element signature="e#104#113#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///anaconda/envs/CS_660_Semester_Project/lib/python3.6/site-packages/keras/engine/training.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="808">
+          <caret line="143" column="0" lean-forward="false" selection-start-line="143" selection-start-column="0" selection-end-line="143" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CS660DataManagement.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="197">
+          <caret line="144" column="4" lean-forward="false" selection-start-line="144" selection-start-column="4" selection-end-line="144" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NNExploration.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="234" column="146" lean-forward="false" selection-start-line="234" selection-start-column="146" selection-end-line="234" selection-end-column="170" />
+          <folding>
+            <element signature="e#555#564#0" expanded="true" />
+            <element signature="e#14996#18272#0" expanded="false" />
+            <element signature="e#18304#21570#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HumanOracle.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="439">
+          <caret line="597" column="97" lean-forward="false" selection-start-line="597" selection-start-column="97" selection-end-line="597" selection-end-column="97" />
           <folding>
             <element signature="e#104#113#0" expanded="true" />
           </folding>
