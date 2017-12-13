@@ -361,11 +361,6 @@ def classicExperiment():
 
     """
 
-    # Randomize the Training and Test sets we use.
-    # random.seed(datetime.datetime.utcnow())
-    # aList = [0,1,2,3,4]
-    # trainingListIndexes = random.sample( aList, 3 )
-    # testingListIndexes = random.sample( aList, 3 )
 
     # Every Flavor, 3 Attempts, Training, Test
     for flavor in allDataFlavors:
