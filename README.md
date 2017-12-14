@@ -4,15 +4,16 @@ Interactive Machine Learning Project to ID Stairs
 Stan Rosenbaum - Fall 2017
 
 Environment:
-    Anaconda 5.0 / Python 3.6
-    TensorFlow 1.1.0
-    Keras 2.0.8
+    * Anaconda 5.0 / Python 3.6
+    * TensorFlow 1.1.0
+    * Keras 2.0.8
 
 The Main Scripts are probably:
-    CS-660-SP-Notebook-1-V2.ipynb - More of a scratch pad.
-    HumanOracle.py - The Human Oracle Script
-    NNExploration.py - For Building and Manipulation of the Keras CNN
-    CS660DataManagement.py - For Manipulating and Handling the Data
+
+    * CS-660-SP-Notebook-1-V2.ipynb - More of a scratch pad.
+    * HumanOracle.py - The Human Oracle Script
+    * NNExploration.py - For Building and Manipulation of the Keras CNN
+    * CS660DataManagement.py - For Manipulating and Handling the Data
 
 Folder Directory Structure:
 
