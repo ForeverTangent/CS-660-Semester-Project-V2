@@ -14,9 +14,12 @@ import datetime
 import numpy as np
 import pickle
 
+import glob
+
 from PIL import Image
 
 combinedDataDir = os.path.join( os.getcwd(), os.pardir, 'DATA', 'COMBINED' )
+renamedDataDir = os.path.join( os.getcwd(), os.pardir, 'DATA', 'RENAMED' )
 pickleDataDir = os.path.join( os.getcwd(), os.pardir, 'DATA', 'PICKLES' )
 searCSVInfoFile = os.path.join(combinedDataDir, 'SEAR_DC_INFO.csv')
 
@@ -854,7 +857,46 @@ def pickleLearningAndVerificationNPArrays( learningNPArray, verificationNPArray,
         dataFlavor, 
         nameID
     )
-    
+
+
+def renameCombindedFiles():
+    """
+
+    Returns:
+
+    """
+    dictInfoFromCSVFile = getDictFromSEARDCInfoCSVFile()
+    asdf = list(dictInfoFromCSVFile.keys())[0]
+
+    print(asdf)
+    print( dictInfoFromCSVFile[asdf] )
+
+    combinedICOLOR = os.path.join( combinedDataDir, 'ICOLOR' )
+    combinedIDEPTH = os.path.join( combinedDataDir, 'IDEPTH' )
+    combinedPCLOUD = os.path.join( combinedDataDir, 'PCLOUD' )
+
+    combinedICOLORList = glob.glob(combinedICOLOR + '/*.png')
+    combinedIDEPTHList = glob.glob(combinedIDEPTH + '/*.png')
+    combinedPCLOUDList = glob.glob(combinedPCLOUD + '/*.csv')
+
+    print(len(combinedICOLORList))
+    print(len(combinedIDEPTHList))
+    print(len(combinedPCLOUDList))
+
+    print( os.path.basename(combinedICOLORList[0] ) )
+
+    # renamedICOLOR = os.path.join( renamedDataDir, 'ICOLOR' )
+    # renamedIDEPTH = os.path.join( renamedDataDir, 'IDEPTH')
+    # renamedPCLOUD = os.path.join( renamedDataDir, 'PCLOUD')
+
+
+    # print( len(os.listdir(combinedIDEPTH)) )
+    # print( len(os.listdir(combinedPCLOUD)) )
+
+
+
+
+
     
 def reportStats():
     """
@@ -950,5 +992,8 @@ if __name__ == "__main__":
     CS660DataManagementCheck()
     createAllBasicData()
     reportStats()
-    print( len( getAllSamples() ) )
-    print( getAllSamples()[0] )
+
+    renameCombindedFiles()
+
+    print("")
+    print("DONE")
